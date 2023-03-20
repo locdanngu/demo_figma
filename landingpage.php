@@ -12,7 +12,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
 </head>
-<!-- http://localhost/WEBLUUANH/landingpage.php -->
+<!-- http://localhost/WEBLUUANH/DEMO_FIGMA/landingpage.php -->
 
 <body>
     <div class="rectangle-38">
