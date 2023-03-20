@@ -278,13 +278,133 @@
                 quote
             </p>
         </div>
-        <div class="bodyin4">
+        <form action="#" method="POST" class="bodyin4">
+            <div class="cathe">
+                <p class="headcathe">Firts Name</p>
+                <input class="noidungcathe" type="text" required>
+            </div>
+            <div>
+                <p class="headcathe">Last Name</p>
+                <input class="noidungcathe" type="text" required>
+            </div>
+            <div class="cathe">
+                <p class="headcathe">Email</p>
+                <input class="noidungcathe" type="text" required>
+            </div>
+            <div>
+                <p class="headcathe">Phone number</p>
+                <input class="noidungcathe" type="text" required>
+            </div>
+            <div class="cathe">
+                <p class="headcathe">Best time to contact</p>
+                <input class="noidungcathe" type="text" required>
+            </div>
+            <div>
+                <p class="headcathe">Address</p>
+                <input class="noidungcathe" type="text" required>
+            </div>
+            <div>
+                <p class="headcathe">Additions comments</p>
+                <input class="noidungcathe2" type="text">
+            </div>
 
+            <input class="check" type="checkbox" required>
+            <p>I would also like a free quote</p>
+
+            <button class="send">Send</button>
+        </form>
+    </div>
+
+    <div class="containerfaq">
+        <div class="headctn2">
+            <div class="slidebar">
+                <div id="slide2"></div>
+            </div>
+            <p class="contentheadfaq">FAQ</p>
+            <p class="contentheadfaq2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Arcu tristique
+                pellentesque mauris in. Pharetra mauris posuere turpis integer dolor at. Enim diam varius suscipit
+                luctus. At et potenti tempus amet. Nec ipsum ultricies sed dolor eu. Tellus, quam sit volutpat, lobortis
+                sit lacus proin turpis mattis
+            </p>
+        </div>
+        <div class="bodyfaq">
+            <div class="questionjs">
+                <i class="bi bi-question-square-fill"></i>
+                <div class="qs2">
+                    <p class="cauhoi">Lorem ipsum dolor sit amet?</p>
+                    <p class="traloi">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et, malesuada volutpat
+                        auctor dui in
+                        sociis aliquam turpis. Sit mi diam, in posuere adipiscing viverra proin elementum commodo.
+                        Ultrices ut id.</p>
+                </div>
+                <button class="qs3"><i class="bi bi-chevron-down"></i></button>
+            </div>
+            <div class="questionjs">
+                <i class="bi bi-question-square-fill"></i>
+                <div class="qs2">
+                    <p class="cauhoi">Lorem ipsum dolor sit amet?</p>
+                    <p class="traloi">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et, malesuada volutpat
+                        auctor dui in
+                        sociis aliquam turpis. Sit mi diam, in posuere adipiscing viverra proin elementum commodo.
+                        Ultrices ut id.</p>
+                </div>
+                <button class="qs3"><i class="bi bi-chevron-down"></i></button>
+            </div>
+            <div class="questionjs">
+                <i class="bi bi-question-square-fill"></i>
+                <div class="qs2">
+                    <p class="cauhoi">Lorem ipsum dolor sit amet?</p>
+                    <p class="traloi">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et, malesuada volutpat
+                        auctor dui in
+                        sociis aliquam turpis. Sit mi diam, in posuere adipiscing viverra proin elementum commodo.
+                        Ultrices ut id.</p>
+                </div>
+                <button class="qs3"><i class="bi bi-chevron-down"></i></button>
+            </div>
+        </div>
+    </div>
+
+    <div class="foot">
+        <div class="allcot">
+            <div class="cot">
+                <p class="tieudecot">About SmartVent</p>
+                <p class="noidungcot">SmartVent systems for your home include positive pressure ventilation, heat
+                    transfer and energy recovery
+                    systems.</p>
+            </div>
+            <div class="cot">
+                <p class="tieudecot">SmartVent Systems</p>
+                <p class="noidungcot">• SmartVent Lite2</p>
+                <p class="noidungcot">• SmartVent Positive2</p>
+                <p class="noidungcot">• SmartVent Evolve2</p>
+                <p class="noidungcot">• SmartVent Evolve</p>
+                <p class="noidungcot">• SmartVent Balance</p>
+                <p class="noidungcot">• SmartVent Synergy2</p>
+            </div>
+            <div class="cot">
+                <p class="tieudecot">Services</p>
+                <p class="noidungcot">• Book a Home assessment</p>
+                <p class="noidungcot">• Request a Ventilation Design</p>
+                <p class="noidungcot">• Register a Product</p>
+                <p class="noidungcot">• Filter Change</p>
+                <p class="noidungcot">• Brochures and Manuals</p>
+                <p class="noidungcot">• Self Help Videos</p>
+                <p class="noidungcot">• SmartVent Blog</p>
+            </div>
+            <div class="cot">
+                <p class="tieudecot">Contact Us</p>
+                <p class="noidungcot">Call: <a class="sdtlh" href="#">0800 140 150</a></p>
+                <div class="icon">
+                    <a href="#"><i class="bi bi-facebook"></i></a>
+                    <a href="#"><i class="bi bi-instagram"></i></a>
+                </div>
+            </div>
         </div>
 
     </div>
-
-
+    <div class="foot2">
+        <span class="cuoicung">2020 © SmartVent. All Rights Reserved</span>
+    </div>
 
 
 
