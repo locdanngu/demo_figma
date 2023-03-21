@@ -806,6 +806,20 @@ li{
     margin-right: 10px;
 }
 
+.bi-chevron-up{
+    display: none;
+    color: #70B64D;
+    font-size: 20px;
+}
+
+.bi-chevron-up:hover{
+    color:#828282;
+}
+
+.bi-chevron-down{
+    font-size: 20px;
+}
+
 /* @media screen and (max-width: 739px){
    .content,.btn,.image-1,.rectangle-11{
     display: none;
