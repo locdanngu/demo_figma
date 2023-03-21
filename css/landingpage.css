@@ -16,7 +16,7 @@ body{
 }
 
 .group-128{ 
-    width: 78%;
+    width: 82%;
     height: 37px;
     display: flex;
     justify-content: space-between;
@@ -53,22 +53,28 @@ body{
     color: black;
 }
 
-.rectangle-11{
-    width: 100%;
+.nav-link{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
     display: flex;
-    justify-content: center;
+    align-items: center;
+    color: #828282;
+}
+.navbar-expand-lg{
     height: 81px;
-    background: #FFFFFF;
-    box-shadow: inset 0px -1px 0px #F2F2F2;
+    margin-left: 135px;
+    padding: 0 !important;
 }
 
-.header{
-    width: 1170px;
-    height: 81px;
-    display: flex;
-    justify-content: space-between;
-    text-align: center;
-    align-items: center;
+.nav-item{
+    height: 34px;
+}
+
+.navbar-collapse {
+    justify-content: space-around;
 }
 
 .ul{
@@ -157,7 +163,7 @@ li{
 }
 
 
-.lmbtn{
+.lmbtn,.lmbtn2{
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -166,6 +172,7 @@ li{
     width: 170px;
     height: 54px;
     left: 135px;
+    cursor: pointer;
     top: 531px;
     background: #70B64D;
     border-radius: 68px;
@@ -175,6 +182,16 @@ li{
     font-size: 18px;
     color: #FFFFFF;
     z-index: 10;
+}
+
+.lmbtn2{
+    display: none;
+}
+
+
+
+.lmbtn:hover{
+    background: #4f7d35;
 }
 
 #slide{
@@ -336,6 +353,7 @@ li{
     font-weight: 700;
     font-size: 36px;
     width: 797px;
+    margin-top: 50px !important;
     display: flex;
     justify-content: center;
     height: 20px;
@@ -687,7 +705,7 @@ li{
 
 .questionjs{
     width: 770px;
-    height: 50px;  
+    height: 100px;  
     /* height: 100px; */
     padding: 20px;
     background: #FFFFFF;
@@ -806,6 +824,10 @@ li{
     margin-right: 10px;
 }
 
+p{
+    margin-top: 18px !important;
+}
+
 .bi-chevron-up{
     display: none;
     color: #70B64D;
@@ -819,6 +841,87 @@ li{
 .bi-chevron-down{
     font-size: 20px;
 }
+
+.bg-light{
+    background-color: #FFFFFF !important;
+}
+
+@media screen and (min-width: 375px) and (max-width: 812px){    /*Độ phân giải của iphone 11 pro*/
+    .rectangle-38{
+        display: none;
+    }
+
+    .image-1{
+        width: 50px;
+        height: 40px;
+    }
+
+    .navbar-expand-lg {
+        margin-left: 10px;
+        height: 61px;
+    }
+
+    .nav-item{
+        height: 45px;
+        background-color: white;
+        z-index: 100;
+    }
+    li{
+        padding: 7px;
+        margin: 0;
+    }
+
+    .contentvector{
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 26px;
+        position: unset;
+        width: 315px;
+        height: 128px;
+        line-height: 32px;
+    }
+
+    .vector1{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .linkvector{
+        width: 315px;
+        height: 125px;
+        position: unset;
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 140%;
+    }
+
+    .lmbtn{
+        display: none;
+    }
+
+    .lmbtn2{
+        position: unset;
+        display: block;
+        width: 263px;
+        margin-left: 29px;
+        align-self: flex-start;
+        height: 54px;
+        background: #70B64D;
+        border: 4px solid rgba(100, 172, 65, 0.23);
+        border-radius: 68px;
+    }
+}
+  
+
+
+
+
+
+
 
 /* @media screen and (max-width: 739px){
    .content,.btn,.image-1,.rectangle-11{

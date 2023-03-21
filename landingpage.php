@@ -6,10 +6,14 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
     <link rel="stylesheet" type="text/css" href="css/landingpage.css">
     <link rel="stylesheet" href="dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <script src="dist/js/jquery.min.js"></script>
     <script src="dist/js/bootstrap.min.js"></script>
 
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
 </head>
 <!-- http://localhost/WEBLUUANH/DEMO_FIGMA/landingpage.php -->
@@ -31,27 +35,53 @@
             </div>
         </div>
     </div>
-    <div class="rectangle-11">
-        <div class="header">
-            <img class="image-1" src="image/logo2.png">
-            <ul class="ul" type="none">
-                <li><a class="navbarlink" href="#">Home</a></li>
-                <li><a class="navbarlink" href="#">Residential</a></li>
-                <li><a class="navbarlink" href="#">Commercial</a></li>
-                <li><a class="navbarlink" href="#">Construction</a></li>
-                <li><a class="navbarlink" href="#">Smart Home</a></li>
-                <li><a class="navbarlink" href="#">Our Team</a></li>
-                <li><a class="navbarlink" href="#">Testimonials</a></li>
-                <li><a class="navbarlink" href="#">Contact Us</a></li>
+    <nav class="navbar navbar-expand-lg">
+        <img class="image-1" src="image/logo2.png">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+            aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="bi bi-list"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Home<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Residential<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Commercial<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Construction<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Smart Home<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Our Team<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Testimonials<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Contact Us<span class="sr-only">(current)</span></a>
+                </li>
+                
             </ul>
         </div>
-    </div>
+    </nav>
     <div class="vector1">
+        
+        
+        <img class="img-2" src="image/smarthome.png">
+        
         <p class="contentvector">Smart Home Ventilation Solutions, Giving You The Best Indoor Air</p>
         <a class="linkvector" href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Massa posuere semper
             quisque viverra neque volutpat. Vel senectus ultrices duis ipsum rutrum</a>
         <button class="lmbtn">Learn more</button>
-        <img class="img-2" src="image/smarthome.png">
+        <button class="lmbtn2">Our heating solutions</button>
+        
     </div>
 
     <div class="slidebar">
@@ -511,48 +541,48 @@
 
     
     down1.onclick = function() {
-        questionjs1.style.height = '100px'; //setting cho khối cao hơn để chứa câu trả lời
+        questionjs1.style.height = '150px'; //setting cho khối cao hơn để chứa câu trả lời
         traloi1.style.display = 'block';    //làm câu trả lời xuất hiện
         // traloi1.style.transform = "translateX(100px) rotate(45deg) scale(1.5)";
-        questionjs1.style.transition = "0.5s ease-in";  //Hiệu ứng trượt xuống cho khối question
+        questionjs1.style.transition = "0.1s ease-in";  //Hiệu ứng trượt xuống cho khối question
         down1.style.display = 'none';
         up1.style.display = 'block';
     };
     down2.onclick = function() {
-        questionjs2.style.height = '100px';
+        questionjs2.style.height = '150px';
         traloi2.style.display = 'block';
-        questionjs2.style.transition = "0.5s ease-in";
+        questionjs2.style.transition = "0.1s ease-in";
         down2.style.display = 'none';
         up2.style.display = 'block';
     };
     down3.onclick = function() {
-        questionjs3.style.height = '100px';
+        questionjs3.style.height = '150px';
         traloi3.style.display = 'block';
-        questionjs3.style.transition = "0.5s ease-in";
+        questionjs3.style.transition = "0.1s ease-in";
         down3.style.display = 'none';
         up3.style.display = 'block';
     };
 
     up1.onclick = function() {                  //đóng khối question lại
-        questionjs1.style.height = '50px';
+        questionjs1.style.height = '100px';
         traloi1.style.display = 'none';
-        questionjs1.style.transition = "0.5s ease-in";
+        questionjs1.style.transition = "0.1s ease-in";
         down1.style.display = 'block';
         up1.style.display = 'none';
     };
 
     up2.onclick = function() {
-        questionjs2.style.height = '50px';
+        questionjs2.style.height = '100px';
         traloi2.style.display = 'none';
-        questionjs2.style.transition = "0.5s ease-in";
+        questionjs2.style.transition = "0.1s ease-in";
         down2.style.display = 'block';
         up2.style.display = 'none';
     };
 
     up3.onclick = function() {
-        questionjs3.style.height = '50px';
+        questionjs3.style.height = '100px';
         traloi3.style.display = 'none';
-        questionjs3.style.transition = "0.5s ease-in";
+        questionjs3.style.transition = "0.1s ease-in";
         down3.style.display = 'block';
         up3.style.display = 'none';
     };
