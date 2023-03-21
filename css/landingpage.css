@@ -317,7 +317,7 @@ li{
     color: #2A2A35;
 }
 
-.note{
+.note,.note2{
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 500;
@@ -577,7 +577,7 @@ li{
     color: #2A2A35;
 }
 
-.contentheadin42{
+.contentheadin42,.contentheadin43{
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 500;
@@ -587,6 +587,9 @@ li{
     color: #828282;
     width: 730px;
     height: 63px;
+}
+.contentheadin43{
+    display: none;
 }
 
 .allcontainerin4{
@@ -624,7 +627,7 @@ li{
 }
 
 .cathe{
-    width: 350px;
+    width: 335px;
     margin-right: 30px;
 }
 
@@ -636,7 +639,7 @@ li{
     text-align: start;
 }
 
-.send{
+.send,.send2{
     width: 730px;
     height: 54px;
     font-family: 'Montserrat';
@@ -653,6 +656,10 @@ li{
     justify-content: center;
     cursor: pointer;
     border: 0;
+}
+
+.send2{
+    display: none;
 }
 
 .send:hover{
@@ -684,7 +691,7 @@ li{
     color: #2A2A35;
 }
 
-.contentheadfaq2{
+.contentheadfaq2,.contentheadfaq3{
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 500;
@@ -694,6 +701,10 @@ li{
     width: 750px;
     height: 63px;
     color: #828282;
+}
+
+.contentheadfaq3{
+    display: none;
 }
 
 .bi-question-square-fill{
@@ -809,13 +820,17 @@ li{
     color: #70B64D;
 }
 
-.cuoicung{
+.cuoicung,.cuoicung2{
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 400;
     font-size: 13px;
     text-align: center;
     color: #FFFFFF;
+}
+
+.cuoicung2{
+    display: none;
 }
 
 .bi-instagram,.bi-facebook{
@@ -834,6 +849,17 @@ p{
     font-size: 20px;
 }
 
+.cb{
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.iw{
+    margin-top: 13px !important;
+    margin-left: 8px;
+}
+
 .bi-chevron-up:hover{
     color:#828282;
 }
@@ -846,9 +872,152 @@ p{
     background-color: #FFFFFF !important;
 }
 
+.note2{
+    display: none;
+}
+
+.contentheadctn2{
+    margin-top: 50px !important;
+
+}
+
+.cot2{
+    display: none;
+}
+
 @media screen and (min-width: 375px) and (max-width: 812px){    /*Độ phân giải của iphone 11 pro*/
+    
+    
     .rectangle-38{
         display: none;
+    }
+
+    #slide{
+        left: 12%;
+    }
+
+    .headslide{
+        display: unset;
+        left: 12%;
+    }
+
+    .ctnslide{
+        text-align: start;
+        
+    }
+
+    .allcontainer{
+        margin-top: 80%;
+        
+    }
+
+    #container{
+        margin-left: 12%;
+    }
+
+    .note{
+        display: none;
+    }
+
+    .note2{
+        display: block;
+        width: 215px;
+        height: 84px;
+    }
+
+    .containerquestion{
+        margin-left: 0;
+        align-items: unset;
+    }
+    .img5{
+        display: none;
+    }
+
+    .bodybodyctn2,.rightbodyctn{
+        display: none;
+    }
+
+    .bodyctn2{
+        width: 100vw;
+    }
+
+    .headctn{
+        text-align: center;
+        width: 100vw;
+        height: 330px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contentheadctn2{
+        display: none;
+    }
+
+    .bodyctn{
+        width: 100vw;
+    }
+
+    .contentheadctn{
+        width: 315px;
+        font-size: 22px;
+        height: 54px;
+    }
+
+    .bodyctn{
+        justify-content: unset;
+        
+    }
+    
+
+    .bodybodybodyctn{
+        width: 257px;
+        font-size: 20px;
+        height: 72px;
+    }
+    .img3{
+        height: 80px;
+        width: 90px;
+    }
+
+    .img4{
+        height: 35px;
+        width: 60px;
+    }
+
+    .bodybodyctn{
+        padding: 0;
+        justify-content: center;
+    }
+    
+    .btnslide{
+        text-align: start;
+        justify-content: start;
+    }
+    .leftslide{
+        margin-left: 0;
+    }
+    .ctnnote{
+        width: 215px;
+        font-size: 20px;
+        height: 48px;
+    }
+
+    .noidung{
+        margin-top: 0;
+        width: 215px;
+        height: 84px;   
+        font-size: 14px;
+    }
+
+    #container{
+        width: 265px;
+        height: 343px;
+    }
+
+    .imgbox{
+        width: 265px;
+        height: 146px;
     }
 
     .image-1{
@@ -907,13 +1076,156 @@ p{
         position: unset;
         display: block;
         width: 263px;
-        margin-left: 29px;
+        margin-left: 3em;
         align-self: flex-start;
         height: 54px;
         background: #70B64D;
         border: 4px solid rgba(100, 172, 65, 0.23);
         border-radius: 68px;
     }
+
+    .allcontainerin4{
+        width: 100vw;
+    }
+
+    .allcontainerin4 > .headctn{
+        text-align: unset;
+        align-items: unset;
+    }
+
+    .allcontainerin4 > .headctn > .slidebar{
+        justify-content: unset;
+        margin-left: 12%;
+    }
+
+    .contentheadin4{
+        padding: 2%;
+    }
+    .contentheadin42{
+        display: none;
+    }
+
+    .contentheadin43{
+        display: block;
+        font-size: 12px;
+        text-align: left;
+        padding-left: 13%;
+        padding-right: 13%;
+        height: 108px;
+        width: 100vw;
+    }
+
+    .bodyin4{
+        flex-wrap: unset;
+        width: 75vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .cathe{
+        width: 100%;
+        margin: 0;
+    }
+
+    .noidungcathe,.noidungcathe2{
+        width: 100%;
+    }
+
+    .send{
+        width: 75vw;
+    }
+
+    .containerfaq{
+        margin-top: 530px;
+        width: 100vw;
+    }
+
+    .contentheadfaq2{
+        display: none;
+    }
+
+    .contentheadfaq3{
+        display: block;
+        width: 100%;
+        height: 36px;
+        font-size: 12px;
+        padding-left: 40%;
+        padding-right: 40%;
+    }
+
+    .questionjs{
+        height: 170px;
+        width: 75vw;
+        padding: 5px;
+    }
+
+    .qs3{
+        display: none;
+    }
+    .traloi{
+        display: block;
+        font-size: 12px;
+        height: 85px;
+        width: 100%;
+    }
+
+    .cauhoi{
+        width: 100%;
+    }
+    .foot{
+        margin-top: 0px;
+        width: 100vw;
+        height: 1037px;
+
+    }
+    .send2{
+        display: block;
+        margin-top: 20px;
+        width: 75vw;
+        height: 54px;
+        font-size: 18px;
+        border-radius: 68px;
+    }
+    .containerfaq{
+        height: 950px;
+    }
+
+    .cot{
+        display: none;
+        
+    }
+
+    .cot2{
+        display: block;
+        width: 100%;
+        padding-top: 5%;
+        padding-left: 13%;
+        padding-right: 13%;
+        margin: 0;
+    
+    }
+
+    .allcot{
+        display: flex;
+        flex-direction: column;
+        margin-left: 0;
+        width: 100%;
+    }
+
+    .cuoicung{
+        display: none;
+    }
+    .cuoicung2{
+        display: block;
+        width: 60vw;
+    }
+
+    .foot2{
+        align-items: unset;
+        padding-top: 2%;
+    }
+
 }
   
 
