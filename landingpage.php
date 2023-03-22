@@ -488,8 +488,11 @@
                 <p class="noidungcot">0508-STRIKE</p>
                 <p class="noidungcot">info@strike.net.nz</p>
                 <p class="noidungcot">Subscribe to newsletter</p>
-                
             </div>
+            <form class="cot2">
+                <button class="sendbtn"><i class="bi bi-send"></i></button>
+                <input class="noidungcathe" type="text" required placeholder="Email">
+            </form>
         </div>
 
     </div>
@@ -628,68 +631,57 @@
 
 
     const down = document.querySelectorAll('.bi-chevron-down');
-    const down1 = down[0]; //lấy phần tử đầu tiên của class bi-chevron-down
-    const down2 = down[1]; //phần tử 2
-    const down3 = down[2];
     const questionjs = document.querySelectorAll('.questionjs');
-    const questionjs1 = questionjs[0];
-    const questionjs2 = questionjs[1];
-    const questionjs3 = questionjs[2];
     const traloi = document.querySelectorAll('.traloi');
-    const traloi1 = traloi[0];
-    const traloi2 = traloi[1];
-    const traloi3 = traloi[2];
     const up = document.querySelectorAll('.bi-chevron-up');
-    const up1 = up[0]; //lấy phần tử đầu tiên của class bi-chevron-down
-    const up2 = up[1]; //phần tử 2
-    const up3 = up[2];
 
 
-    down1.onclick = function() {
-        questionjs1.style.height = '150px'; //setting cho khối cao hơn để chứa câu trả lời
-        traloi1.style.display = 'block'; //làm câu trả lời xuất hiện
-        // traloi1.style.transform = "translateX(100px) rotate(45deg) scale(1.5)";
-        questionjs1.style.transition = "0.1s ease-in"; //Hiệu ứng trượt xuống cho khối question
-        down1.style.display = 'none';
-        up1.style.display = 'block';
+
+
+    down[0].onclick = function() {
+        questionjs[0].style.height = '150px'; //setting cho khối cao hơn để chứa câu trả lời
+        traloi[0].style.display = 'block'; //làm câu trả lời xuất hiện
+        questionjs[0].style.transition = "0.1s ease-in"; //Hiệu ứng trượt xuống cho khối question
+        down[0].style.display = 'none';
+        up[0].style.display = 'block';
     };
-    down2.onclick = function() {
-        questionjs2.style.height = '150px';
-        traloi2.style.display = 'block';
-        questionjs2.style.transition = "0.1s ease-in";
-        down2.style.display = 'none';
-        up2.style.display = 'block';
+    down[1].onclick = function() {
+        questionjs[1].style.height = '150px';
+        traloi[1].style.display = 'block';
+        questionjs[1].style.transition = "0.1s ease-in";
+        down[1].style.display = 'none';
+        up[1].style.display = 'block';
     };
-    down3.onclick = function() {
-        questionjs3.style.height = '150px';
-        traloi3.style.display = 'block';
-        questionjs3.style.transition = "0.1s ease-in";
-        down3.style.display = 'none';
-        up3.style.display = 'block';
+    down[2].onclick = function() {
+        questionjs[2].style.height = '150px';
+        traloi[2].style.display = 'block';
+        questionjs[2].style.transition = "0.1s ease-in";
+        down[2].style.display = 'none';
+        up[2].style.display = 'block';
     };
 
-    up1.onclick = function() { //đóng khối question lại
-        questionjs1.style.height = '100px';
-        traloi1.style.display = 'none';
-        questionjs1.style.transition = "0.1s ease-in";
-        down1.style.display = 'block';
-        up1.style.display = 'none';
+    up[0].onclick = function() { //đóng khối question lại
+        questionjs[0].style.height = '100px';
+        traloi[0].style.display = 'none';
+        questionjs[0].style.transition = "0.1s ease-in";
+        down[0].style.display = 'block';
+        up[0].style.display = 'none';
     };
 
-    up2.onclick = function() {
-        questionjs2.style.height = '100px';
-        traloi2.style.display = 'none';
-        questionjs2.style.transition = "0.1s ease-in";
-        down2.style.display = 'block';
-        up2.style.display = 'none';
+    up[1].onclick = function() {
+        questionjs[1].style.height = '100px';
+        traloi[1].style.display = 'none';
+        questionjs[1].style.transition = "0.1s ease-in";
+        down[1].style.display = 'block';
+        up[1].style.display = 'none';
     };
 
-    up3.onclick = function() {
-        questionjs3.style.height = '100px';
-        traloi3.style.display = 'none';
-        questionjs3.style.transition = "0.1s ease-in";
-        down3.style.display = 'block';
-        up3.style.display = 'none';
+    up[2].onclick = function() {
+        questionjs[2].style.height = '100px';
+        traloi[2].style.display = 'none';
+        questionjs[2].style.transition = "0.1s ease-in";
+        down[2].style.display = 'block';
+        up[2].style.display = 'none';
     };
     </script>
 </body>

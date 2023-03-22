@@ -933,7 +933,7 @@ p{
         display: none;
     }
 
-    .bodybodyctn2,.rightbodyctn{
+    .bodybodyctn2{
         display: none;
     }
 
@@ -981,12 +981,14 @@ p{
     }
 
     .img4{
-        height: 35px;
-        width: 60px;
+        height: auto;
+        width: 100%;
+    
     }
 
     .bodybodyctn{
         padding: 0;
+        width: 100%;
         justify-content: center;
     }
     
@@ -1176,7 +1178,7 @@ p{
     .foot{
         margin-top: 0px;
         width: 100vw;
-        height: 1037px;
+        height: 300vw;
 
     }
     .send2{
@@ -1199,7 +1201,7 @@ p{
     .cot2{
         display: block;
         width: 100%;
-        padding-top: 5%;
+        padding-top: 3%;
         padding-left: 13%;
         padding-right: 13%;
         margin: 0;
@@ -1223,9 +1225,21 @@ p{
 
     .foot2{
         align-items: unset;
-        padding-top: 2%;
+        padding-top: 6%;
     }
 
+    .cot2 > .noidungcathe{
+        opacity: 1;
+    }
+    .sendbtn{
+        background-color: transparent;
+        color: #307CFF;
+        position: relative;
+        left: 85%;
+        top: 2.3em;
+        z-index: 10;
+        border: 0;
+    }
 }
   
 
