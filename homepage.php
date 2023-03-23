@@ -62,8 +62,8 @@
                         <img src="image/co.png" width="53" height="53">
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown" style="min-width:0">
-                        <a class="dropdown-item" href="#"><img src="image/co.png" width="53" height="53"></a>
-                        <a class="dropdown-item" href="#"><img src="image/co.png" width="53" height="53"></a>
+                        <a class="dropdown-item" href="#"><img src="image/vietnam.png" width="53" height="30"></a>
+                        <a class="dropdown-item" href="#"><img src="image/USA.png" width="53" height="30"></a>
                     </div>
                 </li>
             </ul>
@@ -76,7 +76,7 @@
                 class="doimau">Selenium Test Automation</span></p>
         <div class="leftrightbox1">
             <div class="leftbox1">
-                <a href="#" class="tieude2box1">Why Choose MS.Robot Over All Automation Training Websites?</a>
+                <p class="tieude2box1">Why Choose MS.Robot Over All Automation Training Websites?</p>
                 <p class="bodybox1">Unlike other training websites, MS.Robot provides free training tutorials but as an
                     added
                     benefit, you will have full access to all our source code, framework and full Q&A support provided
@@ -236,8 +236,13 @@
             </div>
         </div>
         <div class="allbox3">
-            <img src="image/luon.png" class="luon chua">
-            <img class="headbox3" src="image/cham.png">
+
+            <div class="fix99">
+                <img class="headbox3" src="image/cham.png">
+                <img src="image/luon.png" class="luon chua">
+            </div>
+
+
             <p class="tieudebox3">Learning path for newly graduate with java knowledge: FREE</p>
             <div class="step">
                 <i class="bi bi-check-lg"></i>
@@ -313,7 +318,7 @@
                 <p class="stepans">Step 9: Create Framework for BDD.</p>
             </div>
         </div>
-        <div class="allbox3">
+        <div class="allbox3 fix98">
             <img src="image/luon.png" class="luon">
             <img src="image/talk.png" class="imgtalk">
         </div>
@@ -322,7 +327,8 @@
     <div class="box box3">
         <div class="allbox3 " style="margin-top: 7.5em">
 
-            <p class="tieudebox3 fix2" style="background-color: #EAEFFF;"><span class="doimau2" style="color:black">Understanding</span> how to learn
+            <p class="tieudebox3 fix2" style="background-color: #EAEFFF;"><span class="doimau2"
+                    style="color:black">Understanding</span> how to learn
                 Selenium effectively</p>
             <div class="step2">
 
@@ -362,12 +368,13 @@
                 <p class="stepans">9. The fastest way to learn Selenium in java language.</p>
             </div>
         </div>
-        <div class="allbox3">
+        <div class="allbox3 fix98">
             <img src="image/luon.png" class="luon chua">
-            <p class="tieudebox3 fix2" style="padding-left: 1em;"><span class="doimau2" style="color:black">Understanding</span> why learn
-                    Selenium Automation</p>
+            <p class="tieudebox3 fix2" style="padding-left: 1em;"><span class="doimau2"
+                    style="color:black">Understanding</span> why learn
+                Selenium Automation</p>
             <div class="fix3">
-                
+
                 <div class="step">
 
                     <p class="stepans2">If you ask a tester what she wants to learn next, chances are very high that the
@@ -406,12 +413,127 @@
                     <p class="stepans2">Her automated tests can be repeated any time they are needed.</p>
                 </div>
             </div>
-
-
-
-
-
         </div>
+    </div>
+    <div class="box box4">
+        <p class="headbox4"><i class="bi bi-clock-history"></i> Online learning advantage</p>
+        <div class="bodybox41">
+            <div class="khoibody">
+                <img src="image/thumuc.png" class="thumuc">
+                <div class="chuatext">
+                    <p class="text">LEARN IN YOUR OWN TIME</p>
+                    <p class="text">We are very busy in this world and in the software industry, you need to learn &
+                        update
+                        your skills
+                        set so that you can get a job easily. Online learning is the best tool to help you achieve the
+                        skills you need in you own time
+                    </p>
+                </div>
+
+            </div>
+            <div class="khoibody">
+                <img src="image/thumuc.png" class="thumuc">
+                <div class="chuatext">
+                    <p class="text">24/7 RESOURCES ACCESS</p>
+                    <p class="text">There is no limited time for using resources online. You take your time to
+                        understand
+                        deeply &
+                        correctly. Programming with Selenium requires time to understand, practice. Ability to learn
+                        online
+                        will give you unlimited time instead of feeling lost in the class and have no time to stop and
+                        read
+                        again.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+        <div class="bodybox41">
+            <div class="khoibody">
+                <img src="image/thumuc.png" class="thumuc">
+                <div class="chuatext">
+                    <p class="text">SIGNIFICANCE OF LEARNING SELENIUM</p>
+                    <p class="text">If you are looking for a software tester job, chance is the job will require you
+                        know
+                        test
+                        automation & selenium. Having Selenium Webdriver skill set will give you a peace of mind
+                        whenever
+                        you apply for Software tester job.
+
+                    </p>
+                </div>
+
+            </div>
+            <div class="khoibody">
+                <img src="image/thumuc.png" class="thumuc">
+                <div class="chuatext">
+                    <p class="text">SAVE $$$</p>
+                    <p class="text">
+                        The cost of online class or classic class is a lot and require your time. When you learn using
+                        resources from the internet, it costs less.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="box foot">
+        <div class="cot">
+            <p class="headcot">TUTORIAL</p>
+            <hr>
+            <div class="cotnho">
+                <p class="text1">Java</p>
+                <p class="text1">Selenium (Java)</p>
+                <p class="text1">Selenium Automation Framework</p>
+                <p class="text1">Docker for Selenium</p>
+                <p class="text1">TestNG</p>
+            </div>
+        </div>
+        <div class="cot">
+            <p class="headcot hn">TUTORIAL</p>
+            <hr class="hn">
+            <div class="cotnho">
+                <p class="text1">Jenkins</p>
+                <p class="text1">Git</p>
+                <p class="text1">Github</p>
+                <p class="text1">Maven</p>
+                <p class="text1">Log4j</p>
+            </div>
+        </div>
+        <div class="cot">
+            <p class="headcot">DEMO SITES</p>
+            <hr>
+            <div class="cotnho">
+                <p class="text1">Basic Demo Site</p>
+                <p class="text1">Automation Practice Site</p>
+                <p class="text1">Automation Action Site</p>
+                <p class="text1">E-commerce Demo Site</p>
+            </div>
+        </div>
+        <div class="cot">
+            <p class="headcot">USEFUL LINKS</p>
+            <hr>
+            <div class="cotnho">
+                <p class="text1">Blog</p>
+                <p class="text1">Forum</p>
+                <p class="text1">Contact us</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="foot2">
+        <div class="box fixf">
+            <div>
+            <p class="leftfoot2">© 2020 MS.Robot Corp.</p>
+            </div>
+            
+            <div class="rightfoot2">
+                <a href="#"><i class="bi bi-twitter"></i></a>
+                <a href="#"><i class="bi bi-facebook"></i></a>
+            </div>
+        </div>
+
     </div>
 
 </body>

@@ -63,8 +63,8 @@
                         <img src="image/co.png" width="53" height="53">
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown" style="min-width:0">
-                        <a class="dropdown-item" href="#"><img src="image/co.png" width="53" height="53"></a>
-                        <a class="dropdown-item" href="#"><img src="image/co.png" width="53" height="53"></a>
+                        <a class="dropdown-item" href="#"><img src="image/vietnam.png" width="53" height="30"></a>
+                        <a class="dropdown-item" href="#"><img src="image/USA.png" width="53" height="30"></a>
                     </div>
                 </li>
             </ul>
