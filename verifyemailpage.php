@@ -2,9 +2,9 @@
 <html>
 
 <head>
-    <title>homepage</title>
+    <title>Verify your email</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
-    <link rel="stylesheet" type="text/css" href="css/homepage.css">
+    <link rel="stylesheet" type="text/css" href="css/verifyemailpage.css">
     <link rel="stylesheet" href="dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
@@ -22,7 +22,7 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 </head>
-<!-- http://localhost/WEBLUUANH/DEMO_FIGMA/homepage.php -->
+<!-- http://localhost/WEBLUUANH/DEMO_FIGMA/verifyemailpage.php -->
 
 <body>
     <nav class="navbar navbar-expand-lg">
@@ -72,6 +72,24 @@
         </div>
     </nav>
 
+    <div class="box box1">
+        <p class="headbox1">SIGN UP</p>
+    </div>
+
+
+    <div class="box box2">
+        <div class="khoi">
+            <div class="khoihead1">
+                <p class="headbox2">Verify your email address</p>
+            </div>
+            <div class="khoihead2">
+                <p class="bodybox2">Before proceeding, please check your email for a verification link. If you did not
+                    receive the email, <a href="#" class="linkanother">click here to request another.</a></p>
+                <button class="footbox2">OK</button>
+            </div>
+
+        </div>
+    </div>
 
 
 
@@ -161,6 +179,10 @@
 
 
 
+
+    <div class="feedback">
+        <img src="image/feedback icon.png" class="imgfb" onclick="popupfeedback()">
+    </div>
 
     <!-- modal register -->
     <div id="myModal" class="modal">

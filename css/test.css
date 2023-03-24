@@ -1,0 +1,48 @@
+.phan{
+    width: 30%;
+    height: 100%;
+    margin-right: 0.25em;
+}
+
+.namephan{
+    color: #ffffff;
+}
+
+.all{
+    width: 100%;
+    padding: 5%;
+    background-color: red;
+    display: flex;
+    flex-direction: column;
+    align-items: center ;
+}
+
+
+.body{
+    width: 100%;
+    display: flex;
+    height: 3em;
+    justify-content: space-between;
+}
+
+.sele{
+    width: 100%;
+    height: 2em;
+}
+
+.namephan.hid{
+    visibility: hidden;
+}
+
+.btn{
+    background-color: #ffffff;
+    height: 2em;
+    text-align: center;
+    width: 50%;
+}
+
+.phan2{
+    width: 20%;
+    height: 100%;
+    margin-right: 0.25em;
+}
