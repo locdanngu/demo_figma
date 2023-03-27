@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>Home page</title>
+    <title>Home Page</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
     <link rel="stylesheet" type="text/css" href="css/homepage.css">
     <link rel="stylesheet" href="dist/css/bootstrap.min.css">
@@ -36,7 +36,7 @@
                     <a class="nav-link" href="homepage.php">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="tutorial.php">Tutorial</a>
+                    <a class="nav-link" href="tutorialpage.php">Tutorial</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="forumpage.php">Forum</a>
@@ -915,6 +915,11 @@
             container.classList.add('selected');
         });
     });
+
+
+
+    
+
     </script>
 
 </body>

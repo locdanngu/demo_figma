@@ -18,39 +18,18 @@
 </head>
 
 <body>
-    <div class="all">
-        <p class="namephan">Reserve a Table</p>
-        <div class="body">
-            <div class="phan">
-                <p class="namephan">Party size</p>
-                <select class="sele">
-                    <option>2 guests</option>
-                    <option>2 guests</option>
-                    <option>2 guests</option>
-                </select>
+<div id="myDiv">
+  Nội dung của tôi
+</div>
+<button onclick="toggleDisplay()">Ẩn/hiện</button>
 
-            </div>
-            <div class="phan">
-                <p class="namephan">Date</p>
-                <input type="date" class="sele">
+<script>
+    function toggleDisplay() {
+  var element = document.getElementById("myDiv");
+  element.classList.toggle("hide");
+}
+</script>
 
-            </div>
-            <div class="phan">
-                <p class="namephan">Time</p>
-                <select class="sele">
-                    <option>3:45 PM</option>
-                    <option>3:45 PM</option>
-                    <option>3:45 PM</option>
-                </select>
-
-            </div>
-            <div class="phan phan2">
-                <p class="namephan hid">Time</p>
-                <input class="btn" value="Find a table"></input>
-            </div>
-
-        </div>
-    </div>
 </body>
 
 </html>

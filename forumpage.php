@@ -4,7 +4,7 @@
 <head>
     <title>homepage</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
-    <link rel="stylesheet" type="text/css" href="css/homepage.css">
+    <link rel="stylesheet" type="text/css" href="css/forumpage.css">
     <link rel="stylesheet" href="dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
@@ -22,7 +22,7 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 </head>
-<!-- http://localhost/WEBLUUANH/DEMO_FIGMA/homepage.php -->
+<!-- http://localhost/WEBLUUANH/DEMO_FIGMA/forumpage.php -->
 
 <body>
     <nav class="navbar navbar-expand-lg">
@@ -32,13 +32,13 @@
         </a>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav align-items-center">
-                <li class="nav-item active">
+                <li class="nav-item">
                     <a class="nav-link" href="homepage.php">Home</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="tutorialpage.php">Tutorial</a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item active">
                     <a class="nav-link" href="forumpage.php">Forum</a>
                 </li>
                 <li class="nav-item">
@@ -72,7 +72,252 @@
         </div>
     </nav>
 
+    <div class="box box1">
+        <p class="headbox1">FORUM</p>
+    </div>
 
+    <form class="box box2">
+        <input type="text" placeholder="Enter your question" class="txtinput">
+        <input type="submit" value="Search" class="btninput">
+
+    </form>
+
+    <div class="box box3">
+        <div class="leftbox3">
+            <div class="headleftbox3">
+                <p class="tieude">categoriY <span class="active up">Q & A with Our Test Automation Architect team</span>
+                </p>
+                <button class="askqs">Ask Question</button>
+            </div>
+            <hr class="duongke">
+            <div class="bodyleftbox3">
+                <p class="ttqs">TOTAL QUESTION: <span class="up">60</span></p>
+                <ul class="manybtn">
+                    <li class="btnsmall btnactive">Newest</li>
+                    <li class="btnsmall">Answers</li>
+                    <li class="btnsmall">Views</li>
+                    <li class="btnsmall">Asked by</li>
+                </ul>
+
+            </div>
+            <div class="ctnqs">
+                <img src="image/imgqs.png" class="imgqs">
+                <div class="headqs">
+                    <a href="#" class="active txt">Do you see this question? Q & A with our Test Automation Architect
+                        team</a>
+                    <p class="txt1">To start your self-learning, you need to learn for free on the internet. Its recommendations are
+                        based on a review of the existing academic literature which is complemented by the analysis of
+                        numerous contributions by software developers, self-learners, and teachers of programming.</p>
+                    <div class="foottxt">
+                        <p class="chumo">Asked in: <a href="#">Selenium</a></p>
+                        <p class="chumo">Asked by: <a href="#">Thao Le</a></p>
+                        <p class="chumo">Asked on: January 30, 2020</p>
+                    </div>
+                </div>
+                <div class="rightqs">
+                    <p class="gr">18</p>
+                    <p>Votes</p>
+                    <div class="ovuong">
+                        <p class="numaskqs">2</p>
+                        <p style="margin: 0 !important">Answers</p>
+                        
+                    </div>
+                    <p>3k Views</p>
+                </div>
+            </div>
+            <div class="ctnqs">
+                <img src="image/imgqs.png" class="imgqs">
+                <div class="headqs">
+                    <a href="#" class="active txt">Do you see this question? Q & A with our Test Automation Architect
+                        team</a>
+                    <p class="txt1">To start your self-learning, you need to learn for free on the internet. Its recommendations are
+                        based on a review of the existing academic literature which is complemented by the analysis of
+                        numerous contributions by software developers, self-learners, and teachers of programming.</p>
+                    <div class="foottxt">
+                        <p class="chumo">Asked in: <a href="#">Selenium</a></p>
+                        <p class="chumo">Asked by: <a href="#">Thao Le</a></p>
+                        <p class="chumo">Asked on: January 30, 2020</p>
+                    </div>
+                </div>
+                <div class="rightqs">
+                    <p class="gr">18</p>
+                    <p>Votes</p>
+                    <div class="ovuong">
+                        <p class="numaskqs">2</p>
+                        <p style="margin: 0 !important">Answers</p>
+                        
+                    </div>
+                    <p>3k Views</p>
+                </div>
+            </div>
+            <div class="ctnqs">
+                <img src="image/imgqs.png" class="imgqs">
+                <div class="headqs">
+                    <a href="#" class="active txt">Do you see this question? Q & A with our Test Automation Architect
+                        team</a>
+                    <p class="txt1">To start your self-learning, you need to learn for free on the internet. Its recommendations are
+                        based on a review of the existing academic literature which is complemented by the analysis of
+                        numerous contributions by software developers, self-learners, and teachers of programming.</p>
+                    <div class="foottxt">
+                        <p class="chumo">Asked in: <a href="#">Selenium</a></p>
+                        <p class="chumo">Asked by: <a href="#">Thao Le</a></p>
+                        <p class="chumo">Asked on: January 30, 2020</p>
+                    </div>
+                </div>
+                <div class="rightqs">
+                    <p class="gr">18</p>
+                    <p>Votes</p>
+                    <div class="ovuong">
+                        <p class="numaskqs">2</p>
+                        <p style="margin: 0 !important">Answers</p>
+                        
+                    </div>
+                    <p>3k Views</p>
+                </div>
+            </div>
+            <div class="ctnqs">
+                <img src="image/imgqs.png" class="imgqs">
+                <div class="headqs">
+                    <a href="#" class="active txt">Do you see this question? Q & A with our Test Automation Architect
+                        team</a>
+                    <p class="txt1">To start your self-learning, you need to learn for free on the internet. Its recommendations are
+                        based on a review of the existing academic literature which is complemented by the analysis of
+                        numerous contributions by software developers, self-learners, and teachers of programming.</p>
+                    <div class="foottxt">
+                        <p class="chumo">Asked in: <a href="#">Selenium</a></p>
+                        <p class="chumo">Asked by: <a href="#">Thao Le</a></p>
+                        <p class="chumo">Asked on: January 30, 2020</p>
+                    </div>
+                </div>
+                <div class="rightqs">
+                    <p class="gr">18</p>
+                    <p>Votes</p>
+                    <div class="ovuong">
+                        <p class="numaskqs">2</p>
+                        <p style="margin: 0 !important">Answers</p>
+                        
+                    </div>
+                    <p>3k Views</p>
+                </div>
+            </div>
+            <div class="ctnqs">
+                <img src="image/imgqs.png" class="imgqs">
+                <div class="headqs">
+                    <a href="#" class="active txt">Do you see this question? Q & A with our Test Automation Architect
+                        team</a>
+                    <p class="txt1">To start your self-learning, you need to learn for free on the internet. Its recommendations are
+                        based on a review of the existing academic literature which is complemented by the analysis of
+                        numerous contributions by software developers, self-learners, and teachers of programming.</p>
+                    <div class="foottxt">
+                        <p class="chumo">Asked in: <a href="#">Selenium</a></p>
+                        <p class="chumo">Asked by: <a href="#">Thao Le</a></p>
+                        <p class="chumo">Asked on: January 30, 2020</p>
+                    </div>
+                </div>
+                <div class="rightqs">
+                    <p class="gr">18</p>
+                    <p>Votes</p>
+                    <div class="ovuong">
+                        <p class="numaskqs">2</p>
+                        <p style="margin: 0 !important">Answers</p>
+                        
+                    </div>
+                    <p>3k Views</p>
+                </div>
+            </div>
+            <div class="ctnqs">
+                <img src="image/imgqs.png" class="imgqs">
+                <div class="headqs">
+                    <a href="#" class="active txt">Do you see this question? Q & A with our Test Automation Architect
+                        team</a>
+                    <p class="txt1">To start your self-learning, you need to learn for free on the internet. Its recommendations are
+                        based on a review of the existing academic literature which is complemented by the analysis of
+                        numerous contributions by software developers, self-learners, and teachers of programming.</p>
+                    <div class="foottxt">
+                        <p class="chumo">Asked in: <a href="#">Selenium</a></p>
+                        <p class="chumo">Asked by: <a href="#">Thao Le</a></p>
+                        <p class="chumo">Asked on: January 30, 2020</p>
+                    </div>
+                </div>
+                <div class="rightqs">
+                    <p class="gr">18</p>
+                    <p>Votes</p>
+                    <div class="ovuong">
+                        <p class="numaskqs">2</p>
+                        <p style="margin: 0 !important">Answers</p>
+                        
+                    </div>
+                    <p>3k Views</p>
+                </div>
+            </div>
+            <div class="ctnqs">
+                <img src="image/imgqs.png" class="imgqs">
+                <div class="headqs">
+                    <a href="#" class="active txt">Do you see this question? Q & A with our Test Automation Architect
+                        team</a>
+                    <p class="txt1">To start your self-learning, you need to learn for free on the internet. Its recommendations are
+                        based on a review of the existing academic literature which is complemented by the analysis of
+                        numerous contributions by software developers, self-learners, and teachers of programming.</p>
+                    <div class="foottxt">
+                        <p class="chumo">Asked in: <a href="#">Selenium</a></p>
+                        <p class="chumo">Asked by: <a href="#">Thao Le</a></p>
+                        <p class="chumo">Asked on: January 30, 2020</p>
+                    </div>
+                </div>
+                <div class="rightqs">
+                    <p class="gr">18</p>
+                    <p>Votes</p>
+                    <div class="ovuong">
+                        <p class="numaskqs">2</p>
+                        <p style="margin: 0 !important">Answers</p>
+                        
+                    </div>
+                    <p>3k Views</p>
+                </div>
+            </div>
+
+            <div class="chuyentrang">
+                <div class="leftchuyentrang">
+                    <button class="fixbtn activebtn">15</button>
+                    <button class="fixbtn">30</button>
+                    <button class="fixbtn">50</button>
+                    <p class="chumo fixtxt">Per page</p>
+                </div>
+                <div class="rightchuyentrang">
+                    <button class="fixbtn activebtn">1</button>
+                    <button class="fixbtn">2</button>
+                    <button class="fixbtn">3</button>
+                    <button class="fixbtn">...</button>
+                    <button class="fixbtn">8</button>
+                    <button class="fixbtn2">Next >></button>
+                    
+                </div>
+            </div>
+
+
+        </div>
+        <div class="rightbox3">
+            <p class="headrightbox3">TOTAL QUESTION: 72</p>
+            <hr class="duongke">
+            <p class="headrightbox3 mt-5">categories</p>
+            <hr class="duongke">
+            <div class="qs">
+                <a href="#" class="numqs active">60</a>
+                <a href="#" class="txtqs active">Q & A with our Test Automation Architect team</a>
+            </div>
+            <hr class="duongke">
+            <div class="qs">
+                <a href="#" class="numqs">12</a>
+                <a href="#" class="txtqs">General discussion</a>
+            </div>
+            <hr class="duongke">
+
+            <a href="#"><img src="image/qc1.png" class="mt-5"></a>
+            <a href="#"><img src="image/qc2.png" class="mt-5"></a>
+            <a href="#"><img src="image/qc3.png" class="mt-5"></a>
+            <a href="#"><img src="image/qc4.png" class="mt-5"></a>
+        </div>
+    </div>
 
 
 

@@ -1,5 +1,7 @@
 body{
     background-color: #FBFEFF !important;
+    font-family: 'Circular Std';
+font-style: normal;
 }
 
 .box{
@@ -91,7 +93,9 @@ nav{
     padding-bottom: 2em;
     margin-top: 5em;
 }
-
+hr{
+    margin-left: 0 !important   ;
+}
 .headcot{
     font-family: 'Circular Std';
 font-style: normal;

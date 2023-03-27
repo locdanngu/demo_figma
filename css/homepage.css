@@ -1,5 +1,7 @@
 body {
     background-image: url('../image/back.png');
+    font-family: 'Circular Std';
+    font-style: normal;
 }
 
 .dropdown-item {
@@ -958,19 +960,18 @@ hr {
     /* Thay đổi giá trị độ xoay màu theo ý muốn */
 }
 
-.imgvector{
+.imgvector {
     z-index: 2;
     cursor: pointer;
     background-color: #FFFFFF;
 }
 
-.imgvector2{
+.imgvector2 {
     position: absolute;
     z-index: 1;
     cursor: pointer;
 }
 
-input[type="radio"]{
+input[type="radio"] {
     cursor: pointer;
 }
-
