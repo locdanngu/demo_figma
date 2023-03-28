@@ -111,6 +111,11 @@ hr {
     color: #FFFFFF;
 }
 
+.cotnho{
+    display: flex;
+    flex-direction: column;
+}
+
 .text1 {
     font-family: 'Circular Std';
     font-style: normal;
@@ -118,9 +123,14 @@ hr {
     font-size: 14px;
     line-height: 24px;
     /* or 171% */
-
+margin-bottom: 1em;
 
     color: #FFFFFF;
+}
+
+.text1:hover{
+    color: #000;
+    text-decoration: none;
 }
 
 .foot {
@@ -316,6 +326,10 @@ hr {
     height: 3em;
     width: 25%;
     color: #FFFFFF;
+    cursor: pointer;
+}
+.askqs:hover{
+    opacity: 0.8;
 }
 
 .up {
@@ -478,6 +492,59 @@ hr {
     width: 100%;
 }
 
+input[type=checkbox] {
+    position: relative;
+      cursor: pointer;
+}
+input[type=checkbox]:before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: 0;
+    left: 0;
+    background-color:#e9e9e9;
+}
+input[type=checkbox]:checked:before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: 0;
+    left: 0;
+    background-color:#1E80EF;
+}
+input[type=checkbox]:checked:after {
+    content: "";
+    display: block;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+    position: absolute;
+    top: 2px;
+    left: 6px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -605,7 +672,7 @@ hr {
     margin-left: 0.5em;
 }
 
-.btnsign {
+.btnsign,.btnsign2 {
     font-family: 'Circular Std';
     font-style: normal;
     font-weight: 700;
@@ -618,6 +685,29 @@ hr {
     color: #FFFFFF;
     cursor: pointer;
 }
+
+.btnsign2{
+    margin-bottom: 2em;
+
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+.tieudeqs{
+    margin: 0 !important;
+}
+
+.btnsign2:hover{
+    opacity: 0.8;
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+.black{
+    background-color: #212529 !important;
+}
+
 
 
 .btnsign:hover {

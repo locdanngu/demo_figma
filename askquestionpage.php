@@ -2,9 +2,9 @@
 <html>
 
 <head>
-    <title>Tutorial Page</title>
+    <title>Ask a Question</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
-    <link rel="stylesheet" type="text/css" href="css/tutorialpage.css">
+    <link rel="stylesheet" type="text/css" href="css/askquestionpage.css">
     <link rel="stylesheet" href="dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
@@ -20,10 +20,9 @@
     <script src="dist/js/jquery.min.js"></script>
     <script src="dist/js/bootstrap.min.js"></script>
 
-
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 </head>
-<!-- http://localhost/WEBLUUANH/DEMO_FIGMA/tutorialpage.php -->
+<!-- http://localhost/WEBLUUANH/DEMO_FIGMA/askquestionpage.php -->
 
 <body>
     <nav class="navbar navbar-expand-lg">
@@ -33,10 +32,10 @@
         </a>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav align-items-center">
-                <li class="nav-item">
+                <li class="nav-item active">
                     <a class="nav-link" href="homepage.php">Home</a>
                 </li>
-                <li class="nav-item active">
+                <li class="nav-item">
                     <a class="nav-link" href="tutorialpage.php">Tutorial</a>
                 </li>
                 <li class="nav-item">
@@ -74,191 +73,76 @@
     </nav>
 
     <div class="box box1">
-        <p class="headbox1">TUTORIALS</p>
+        <p class="headbox1">FORUM</p>
     </div>
-
 
     <div class="box box2">
+        <form class="leftbox2" method="GET" action="#">
+            <p class="tieudebox2">Ask a question</p>
+            <hr class="gachke">
+            <p class="tieudeleftbox2">Title</p>
+            <p class="txtbt">Be specific and imagine you’re asking a question to another person</p>
+            <input class="oqs" type="text"
+                placeholder="e.g. Is there an R function for finding the index of an element in a vector?" required>
+            <p class="tieudeleftbox2">Body</p>
+            <p class="txtbt">Include all the information someone would need to answer your question</p>
+            <input class="oqs big" type="text" placeholder="" required>
+            
 
-        <div class="bodybox2">
-            <a class="phantu" href="#">
-                <img class="imgphantu" src="image/se.png">
-                <p class="noidungphantu">Selenium basic</p>
-            </a>
-            <a class="phantu" href="#">
-                <img class="imgphantu" src="image/se2.png">
-                <p class="noidungphantu">Selenium advance</p>
-            </a>
-            <a class="phantu" href="#">
-                <img class="imgphantu" src="image/java.png">
-                <p class="noidungphantu">Java basic</p>
-            </a>
-            <a class="phantu" href="#">
-                <img class="imgphantu" src="image/java2.png">
-                <p class="noidungphantu">Java advance</p>
-            </a>
-            <a class="phantu" href="#">
-                <img class="imgphantu" src="image/sefr.png">
-                <p class="noidungphantu">Selenium Automation frameworks</p>
-            </a>
-            <a class="phantu" href="#">
-                <img class="imgphantu" src="image/seauto.png">
-                <p class="noidungphantu">Locators for Selenium automation</p>
-            </a>
-            <a class="phantu" href="#">
-                <img class="imgphantu" src="image/seauto2.png">
-                <p class="noidungphantu">Handling Data in
-                    Selenium Automation</p>
-            </a>
-            <a class="phantu" href="#">
-                <img class="imgphantu" src="image/seauto3.png">
-                <p class="noidungphantu">Reports for
-                    Selenium Automation</p>
-            </a>
-            <a class="phantu" href="#">
-                <img class="imgphantu" src="image/seauto4.png">
-                <p class="noidungphantu">Running Selenium Automation
-                    (multiple browsers, platforms, environments)</p>
-            </a>
-            <a class="phantu" href="#">
-                <img class="imgphantu" src="image/jenkin.png">
-                <p class="noidungphantu">Jenkins build & Jenkins pipeline for Selenium Automation</p>
-            </a>
-            <a class="phantu" href="#">
-                <img class="imgphantu" src="image/maven.png">
-                <p class="noidungphantu">Maven</p>
-            </a>
-            <a class="phantu" href="#">
-                <img class="imgphantu" src="image/test.png">
-                <p class="noidungphantu">TestNG</p>
-            </a>
-            <a class="phantu" href="#">
-                <img class="imgphantu" src="image/log.png">
-                <p class="noidungphantu">Log4j</p>
-            </a>
-            <a class="phantu" href="#">
-                <img class="imgphantu" src="image/git.png">
-                <p class="noidungphantu">Git</p>
-            </a>
-            <a class="phantu" href="#">
-                <img class="imgphantu" src="image/github.png">
-                <p class="noidungphantu">Github</p>
-            </a>
-            <a class="phantu" href="#">
-                <img class="imgphantu" src="image/docker.png">
-                <p class="noidungphantu">Docker for Selenium</p>
-            </a>
-        </div>
-    </div>
-
-
-    <div class="box3">
-        <div class="leftbox3">
-            <p class="headleftbox3">Jmeter Fundamentals, Install and Create A Basic Jmeter Test Plan</p>
-            <p class="bodyleftbox3">Browser Recording, WorkBench, Running Your First Test, Listener, Reading Test Result
+            <p class="tieudeleftbox2">Tags</p>
+            <p class="txtbt">Add up to 5 tags to describe what your question is about</p>
+            <input class="oqs" type="text" placeholder="e.g. selenium, automation test" required>
+            <input class="sendqs" type="submit" value="Review your question">
+        </form>
+        <div class="rightbox2">
+            <p class="tieudebox2">Draft your question</p>
+            <hr class="gachke">
+            <p class="txtbt">The community is here to help you with specific coding, algorithm, or language problems.
             </p>
-            <p class="bodyleftbox3">Toolbars, Log Into A Website, Regular Expression Extractor</p>
-            <p class="bodyleftbox3">Handle Dynamic Token, Assertions, Using CSV Data File</p>
-            <p class="bodyleftbox3">Jmeter Components</p>
-            <p class="bodyleftbox3">Throughput, Function Helper, Saving Test Result</p>
-            <p class="bodyleftbox3">Remote Jmeter, Plugins Manager, Variables</p>
-            <p class="bodyleftbox3">HTTP Simple Table Server, Json Format, Bean Shell Script</p>
-        </div>
-        <div class="bodybox3">
-            <img src="image/apachejmeter.png">
-            <p class="headbodybox3">Jmeter Fundamentals, Install and Create A Basic Jmeter Test Plan</p>
-            <div class="phantutxt">
-                <p class="headphantu">Load, Stress And Performance Test</p>
-                <!-- <p class="noidungtieude"><span class="tieude">Load test:</span></p> -->
-                <p class="noidungtieude"><span class="tieude">Load test:</span> is the testing how the system works by
-                    increasing the load sending to the system. With load testing, we will know how many user using
-                    software product that the system still works properly.</p>
-                <p class="noidungtieude"><span class="tieude">Performance test</span> is the testing how software
-                    application performed such as how long it takes for the servers to response. With performance
-                    testing, we will know how long it takes for a software product get response so that we can improve
-                    the quality of software by making sure it will be run in the expected time response</p>
-                <p class="noidungtieude"><span class="tieude">Stress test:</span> is the testing how the system works
-                    under stress. With stress test, we will know at which point the system will be failed and how the
-                    system recovers back.</p>
-                <p class="headphantu">What Is Jmeter?</p>
-                <p class="noidungtieude"><span class="tieude">Jmeter</span> is a free application testing software from
-                    The Apache Software Foundation.</p>
-                <p class="noidungtieude"><span class="tieude">Jmeter</span> is a tool for running Load test, Performance
-                    test or Stress test. It is designed for testing Web Application, Web services (Soap & Rest api) and
-                    more.</p>
-                <p class="headphantu">How does Jmeter work?</p>
-                <p class="noidungtieude"><span class="tieude">Jmeter</span> acts like a group of users sending requests
-                    to a target server. It collects response from target server and other information which show the
-                    performance of the application via graphs or summary tables.</p>
-                <p class="headphantu">Why Use Jmeter?</p>
-                <p class="noidungtieude"><span class="tieude">Jmeter</span> is an open-source application. Therefore, it
-                    is very popular Test tool.</p>
-                <p class="noidungtieude"><span class="tieude">Jmeter</span> has been created for 15 years and has a
-                    large community supporting.</p>
-                <p class="noidungtieude"><span class="tieude">Jmeter</span> is one of the top Software Testing Tool for
-                    automation. Most of the opening job for software tester, QA engineer, Automation analyst, QA Analyst
-                    require or “good to have” Jmeter skill.</p>
-                <p class="headphantu">Install Jmeter</p>
-                <p class="noidungtieude">Below is Operating Systems can be run Jmeter.
-                    Even if your OS is not listed, Jmeter should run on it provided that the JVM is compliant.</p>
-                <div class="imgdowload">
-                    <img src="image/in4dowload.png">
+            <p class="txtbt">Avoid asking opinion-based questions.</p>
+            <div class="khoiqs">
+                <div class="headkhoiqs">
+                    <p class="boxqs">1</p>
+                    <p class="boxname">Summarize the problem</p>
+                    <i class="bi bi-chevron-down"></i>
+                    <i class="bi bi-chevron-up"></i>
                 </div>
-
-                <p class="headphantu">Download Java:</p>
-                <p class="noidungtieude">Latest java version: <a
-                        href="https://www.java.com/en/download/windows-64bit.jsp">https://www.java.com/en/download/windows-64bit.jsp</a>
-                </p>
-                <p class="noidungtieude">Following the Instruction from Java to install. Then set up JAVA_HOME
-                    environment variable by these steps</p>
-                <p class="noidungtieude">- Open Control Panel\System and Security\System on your computer</p>
-                <div class="imgdowload">
-                    <img src="image/in4dowload2.png">
+                <div class="bodykhoiqs hidden">
+                    <ul>
+                        <li>Include details about your goal</li>
+                        <li>Describe expected and actual results</li>
+                        <li>Include any error messages</li>
+                    </ul>
                 </div>
-                <p class="noidungtieude">- Choose Advance system setting</p>
-                <div class="imgdowload">
-                    <img src="image/in4dowload3.png">
+            </div>
+            <div class="khoiqs">
+                <div class="headkhoiqs">
+                    <p class="boxqs">2</p>
+                    <p class="boxname">Describe what you've tried</p>
+                    <i class="bi bi-chevron-down"></i>
+                    <i class="bi bi-chevron-up"></i>
                 </div>
-                <p class="noidungtieude">- Click on Environment Variables</p>
-                <div class="imgdowload">
-                    <img src="image/in4dowload4.png">
+                <div class="bodykhoiqs hidden">
+                    <p class="txtbt fix">Show what you've tried and tell us what you found (on this site or elsewhere)
+                        and
+                        why it didn't meet your needs. You can get better answers when you provide research.</p>
                 </div>
-                <p class="noidungtieude">- Select Path under System variables and click on Edit</p>
-                <div class="imgdowload">
-                    <img src="image/in4dowload5.png">
+            </div>
+            <div class="khoiqs">
+                <div class="headkhoiqs">
+                    <p class="boxqs">3</p>
+                    <p class="boxname">Show some code</p>
+                    <i class="bi bi-chevron-down"></i>
+                    <i class="bi bi-chevron-up"></i>
                 </div>
-                <p class="noidungtieude">- At the end of Variable value, put path where is <span class="tieude">Java\Bin
-                        folder such as C:\Program Files (x86)\Java\jre1.8.0_91\bin</span></p>
-                <p class="noidungtieude">- Then click on OK. Make sure you don't remove any existing Variable value.</p>
-
-                <p class="tieude">Download Jmeter: <a
-                        href="http://Jmeter.apache.org/download_Jmeter.cgi">http://Jmeter.apache.org/download_Jmeter.cgi</a>
-                </p>
-                <p class="noidungtieude">- To install Jmeter, simply unzip the zip/tar file into the directory where you
-                    want Jmeter to be installed (zip file is for Window, tar file is for Unix). Make sure that you have
-                    a JRE/JDK correctly installed and the JAVA_HOME environment variable set.</p>
-                <p class="noidungtieude"><span class="tieude">To run Jmeter:</span> run the Jmeter.bat (for Windows) or
-                    Jmeter (for Unix) file. These files are found in the bin directory.</p>
-                <p class="headphantu">Jmeter Test Plan: Basic Elements (Thread Group, Sampler, Assertion, Listener)</p>
-                <p class="noidungtieude"><span class="tieude">Thread group:</span> is to set up number of user to run
-                    the test.</p>
-                <p class="noidungtieude"><span class="tieude">Sampler:</span> is the request for running the test
-                    (http/https/soap/rest).</p>
-                <p class="noidungtieude"><span class="tieude">Assertions:</span> are to use for comparing the actual
-                    result with the expected result so that we can decide if the test is passed.</p>
-                <p class="noidungtieude"><span class="tieude">Listeners:</span> are the reports from Jmeter.</p>
-
-
+                <div class="bodykhoiqs hidden">
+                    <p class="txtbt fix">When appropriate, share the minimum amount of code others need to reproduce
+                        your
+                        problem (also called a minimum, reproducible example) </p>
+                </div>
             </div>
         </div>
-        <div class="rightbox3">
-            <a href=""><img src="image/qc1.png" class="imgrightbox3"></a>
-            <a href=""><img src="image/qc2.png" class="imgrightbox3"></a>
-            <a href=""><img src="image/qc3.png" class="imgrightbox3"></a>
-            <a href=""><img src="image/qc4.png" class="imgrightbox3"></a>
-        </div>
     </div>
-
 
 
 
@@ -347,10 +231,6 @@
 
 
 
-
-    <div class="feedback">
-        <img src="image/feedback icon.png" class="imgfb" onclick="popupfeedback()">
-    </div>
 
     <!-- modal register -->
     <div id="myModal" class="modal">
@@ -692,6 +572,59 @@
             container.classList.add('selected');
         });
     });
+
+
+    const khoi = document.querySelectorAll('.headkhoiqs');
+    const bodykhoiqs = document.querySelectorAll('.bodykhoiqs');
+    const up = document.querySelectorAll('.bi-chevron-up');
+    const boxname = document.querySelectorAll('.boxname');
+    const down = document.querySelectorAll('.bi-chevron-down');
+
+    khoi[0].addEventListener("click", function() {
+        if (bodykhoiqs[0].classList.contains("hidden")) {
+            bodykhoiqs[0].classList.remove("hidden");
+            boxname[0].style.color = '#0744F2';
+            up[0].style.display = 'block';
+            down[0].style.display = 'none';
+        } else {
+            bodykhoiqs[0].classList.add("hidden");
+            up[0].style.display = 'none';
+            boxname[0].style.color = '';
+            down[0].style.display = 'block';
+        }
+    });
+
+    khoi[1].addEventListener("click", function() {
+        if (bodykhoiqs[1].classList.contains("hidden")) {
+            bodykhoiqs[1].classList.remove("hidden");
+            boxname[1].style.color = '#0744F2';
+            up[1].style.display = 'block';
+            down[1].style.display = 'none';
+        } else {
+            bodykhoiqs[1].classList.add("hidden");
+            up[1].style.display = 'none';
+            boxname[1].style.color = '';
+            down[1].style.display = 'block';
+        }
+    });
+
+    khoi[2].addEventListener("click", function() {
+        if (bodykhoiqs[2].classList.contains("hidden")) {
+            bodykhoiqs[2].classList.remove("hidden");
+            boxname[2].style.color = '#0744F2';
+            up[2].style.display = 'block';
+            down[2].style.display = 'none';
+        } else {
+            bodykhoiqs[2].classList.add("hidden");
+            up[2].style.display = 'none';
+            boxname[2].style.color = '';
+            down[2].style.display = 'block';
+        }
+    });
+
+
+
+
     </script>
 
 

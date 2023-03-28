@@ -91,7 +91,7 @@ nav{
     box-sizing: border-box;
     width: 100%;
     padding-bottom: 2em;
-    margin-top: 5em;
+    margin-top: 10em;
 }
 hr{
     margin-left: 0 !important   ;
@@ -223,15 +223,172 @@ input[type=checkbox]:checked:after {
     left: 6px;
 }
 
+.box1 {
+    width: 100%;
+    background-color: #0744F2;
+    height: 6em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.headbox1 {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 44px;
+    /* identical to box height */
+
+    text-align: center;
+
+    color: #FFFFFF;
+    margin: 0 !important;
+
+}
+
+.box2{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 3em;
+}
+
+.tieudebox2{
+    font-weight: 500;
+font-size: 24px;
+line-height: 30px;
+/* identical to box height */
+
+text-transform: uppercase;
+
+color: #3E3E3E;
+}
+
+.leftbox2{
+    width: 70%;
+}
+
+.rightbox2{
+    width: 28%;
+}
+
+.gachke{
+    border: 0.5px solid #AFCFFF !important;
+    width: 100% !important;
+}
+
+.tieudeleftbox2{
+    font-weight: 500;
+font-size: 20px;
+line-height: 25px;
+/* identical to box height */
 
 
+color: #0744F2;
+}
 
+.txtbt{
+    font-weight: 450;
+font-size: 14px;
+line-height: 20px;
+/* identical to box height, or 143% */
 
+display: flex;
+align-items: center;
 
+color: #3E3E3E;
+}
 
+.oqs{
+    width: 100%;
+    height: 3em;
+    border: 1px solid #4B91F9;
+border-radius: 2px;
+padding-left: 1em;
+margin-bottom: 1em;
+}
 
+.sendqs{
+    background: #0744F2;
+border-radius: 2px;
+border: 0;
+cursor: pointer;
+color: #FFFFFF;
+width: 30%;
+height: 3em;
+}
 
+.sendqs:hover{
+    opacity: 0.8;
+}
+.big{
+    height: 20em;
+}
 
+/* .bi-chevron-down,.bi-chevron-up{
+    cursor: pointer;
+}
+
+.bi-chevron-down:hover,.bi-chevron-up:hover{
+    opacity: 0.5;
+} */
+
+.bi-chevron-up{
+    display: none;
+}
+
+.headkhoiqs{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+
+.headkhoiqs:hover{
+    opacity: 0.5;
+}
+
+.boxqs{
+    background: #F5F7FF;
+color: #0744F2;
+width: 2.5em;
+height: 2.5em;
+margin: 0 !important;
+
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.boxname{
+    margin: 0 !important;
+    font-weight: 500;
+font-size: 20px;
+width: 75%;
+line-height: 30px;
+/* identical to box height, or 150% */
+
+color: #3E3E3E;
+
+}
+
+.hidden{
+    display: none;
+}
+
+.bodykhoiqs{
+    padding-left: 2em;
+    padding-top: 0.5em; 
+    /* display: none; */
+}
+
+.txtbt.fix{
+    padding-left: 2em;
+}
+
+.khoiqs{
+    margin-bottom: 2em;
+}
 
 
 

@@ -113,41 +113,41 @@
             <p class="headcot">TUTORIAL</p>
             <hr>
             <div class="cotnho">
-                <p class="text1">Java</p>
-                <p class="text1">Selenium (Java)</p>
-                <p class="text1">Selenium Automation Framework</p>
-                <p class="text1">Docker for Selenium</p>
-                <p class="text1">TestNG</p>
+                <a href="#" class="text1">Java</a>
+                <a href="#" class="text1">Selenium (Java)</a>
+                <a href="#" class="text1">Selenium Automation Framework</a>
+                <a href="#" class="text1">Docker for Selenium</a>
+                <a href="#" class="text1">TestNG</a>
             </div>
         </div>
         <div class="cot">
             <p class="headcot hn">TUTORIAL</p>
             <hr class="hn">
             <div class="cotnho">
-                <p class="text1">Jenkins</p>
-                <p class="text1">Git</p>
-                <p class="text1">Github</p>
-                <p class="text1">Maven</p>
-                <p class="text1">Log4j</p>
+                <a href="#" class="text1">Jenkins</a>
+                <a href="#" class="text1">Git</a>
+                <a href="#" class="text1">Github</a>
+                <a href="#" class="text1">Maven</a>
+                <a href="#" class="text1">Log4j</a>
             </div>
         </div>
         <div class="cot">
             <p class="headcot">DEMO SITES</p>
             <hr>
             <div class="cotnho">
-                <p class="text1">Basic Demo Site</p>
-                <p class="text1">Automation Practice Site</p>
-                <p class="text1">Automation Action Site</p>
-                <p class="text1">E-commerce Demo Site</p>
+                <a href="#" class="text1">Basic Demo Site</a>
+                <a href="#" class="text1">Automation Practice Site</a>
+                <a href="#" class="text1">Automation Action Site</a>
+                <a href="#" class="text1">E-commerce Demo Site</a>
             </div>
         </div>
         <div class="cot">
             <p class="headcot">USEFUL LINKS</p>
             <hr>
             <div class="cotnho">
-                <p class="text1">Blog</p>
-                <p class="text1">Forum</p>
-                <p class="text1">Contact us</p>
+                <a href="blogpage.php" class="text1">Blog</a>
+                <a href="forumpage.php" class="text1">Forum</a>
+                <a href="contactuspage" class="text1">Contact us</a>
             </div>
         </div>
     </div>

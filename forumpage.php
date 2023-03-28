@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>homepage</title>
+    <title>Forum Page</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
     <link rel="stylesheet" type="text/css" href="css/forumpage.css">
     <link rel="stylesheet" href="dist/css/bootstrap.min.css">
@@ -87,7 +87,7 @@
             <div class="headleftbox3">
                 <p class="tieude">categoriY <span class="active up">Q & A with Our Test Automation Architect team</span>
                 </p>
-                <button class="askqs">Ask Question</button>
+                <button class="askqs" onclick="popupselectqs()">Ask Question</button>
             </div>
             <hr class="duongke">
             <div class="bodyleftbox3">
@@ -340,41 +340,41 @@
             <p class="headcot">TUTORIAL</p>
             <hr>
             <div class="cotnho">
-                <p class="text1">Java</p>
-                <p class="text1">Selenium (Java)</p>
-                <p class="text1">Selenium Automation Framework</p>
-                <p class="text1">Docker for Selenium</p>
-                <p class="text1">TestNG</p>
+                <a href="#" class="text1">Java</a>
+                <a href="#" class="text1">Selenium (Java)</a>
+                <a href="#" class="text1">Selenium Automation Framework</a>
+                <a href="#" class="text1">Docker for Selenium</a>
+                <a href="#" class="text1">TestNG</a>
             </div>
         </div>
         <div class="cot">
             <p class="headcot hn">TUTORIAL</p>
             <hr class="hn">
             <div class="cotnho">
-                <p class="text1">Jenkins</p>
-                <p class="text1">Git</p>
-                <p class="text1">Github</p>
-                <p class="text1">Maven</p>
-                <p class="text1">Log4j</p>
+                <a href="#" class="text1">Jenkins</a>
+                <a href="#" class="text1">Git</a>
+                <a href="#" class="text1">Github</a>
+                <a href="#" class="text1">Maven</a>
+                <a href="#" class="text1">Log4j</a>
             </div>
         </div>
         <div class="cot">
             <p class="headcot">DEMO SITES</p>
             <hr>
             <div class="cotnho">
-                <p class="text1">Basic Demo Site</p>
-                <p class="text1">Automation Practice Site</p>
-                <p class="text1">Automation Action Site</p>
-                <p class="text1">E-commerce Demo Site</p>
+                <a href="#" class="text1">Basic Demo Site</a>
+                <a href="#" class="text1">Automation Practice Site</a>
+                <a href="#" class="text1">Automation Action Site</a>
+                <a href="#" class="text1">E-commerce Demo Site</a>
             </div>
         </div>
         <div class="cot">
             <p class="headcot">USEFUL LINKS</p>
             <hr>
             <div class="cotnho">
-                <p class="text1">Blog</p>
-                <p class="text1">Forum</p>
-                <p class="text1">Contact us</p>
+                <a href="blogpage.php" class="text1">Blog</a>
+                <a href="forumpage.php" class="text1">Forum</a>
+                <a href="contactuspage" class="text1">Contact us</a>
             </div>
         </div>
     </div>
@@ -622,6 +622,34 @@
 
 
 
+    <!-- modal select question -->
+    <div id="myModal6" class="modal">
+        <div class="modal-content">
+            <div class="headpopup">
+                <h2 class="headsignup">Select the question category</h2>
+                <span class="close">&times;</span>
+            </div>
+
+            <hr class="duongthang">
+            <div class="bodypopup">
+
+                <p class="tieudeqs">1. Special catalog, you will be expertly answered by our experts.</p>
+                <a class="btnsign2" href="logintoask.php">Q & A with Our Test Automation Architect team</a>
+                <p class="tieudeqs">2. Free catalogory, you can ask all questions here. No login required.</p>
+                
+                <a class="btnsign2 black" href="#">General Discussion</a>
+
+
+            </div>
+
+
+
+        </div>
+    </div>
+
+
+
+
 
 
 
@@ -640,10 +668,12 @@
     var modalfgp = document.getElementById("myModal3");
     var modalresetpass = document.getElementById("myModal4");
     var modalfeedback = document.getElementById("myModal5");
-    var span = document.getElementsByClassName("close")[0];
-    var span2 = document.getElementsByClassName("close")[1];
-    var span3 = document.getElementsByClassName("close")[2];
-    var span4 = document.getElementsByClassName("close")[3];
+    var modalselectqs = document.getElementById("myModal6");
+    var span = document.getElementsByClassName("close")[0];     //đăng ký
+    var span2 = document.getElementsByClassName("close")[1];    //đăng nhập
+    var span3 = document.getElementsByClassName("close")[2];    //quên mật khẩu
+    var span4 = document.getElementsByClassName("close")[3];    //feed back
+    var span5 = document.getElementsByClassName("close")[4];    //select question
     // Khi người dùng nhấn nút, hiển thị popup
     function popupsignup() {
         modalsign.style.display = "block";
@@ -685,6 +715,14 @@
         modalfeedback.style.display = "none";
     }
 
+    function popupselectqs() {
+        modalselectqs.style.display = "block"
+    }
+
+    span5.onclick = function() {
+        modalselectqs.style.display = "none";
+    }
+
     window.onclick = function(event) { //Xử lí sự kiện khi bấm ngoài pop up
         if (event.target == modalsign) {
             modalsign.style.display = "none";
@@ -705,6 +743,10 @@
 
         if (event.target == modalfeedback) {
             modalfeedback.style.display = "none";
+        }
+
+        if (event.target == modalselectqs) {
+            modalselectqs.style.display = "none";
         }
     }
 
