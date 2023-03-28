@@ -170,16 +170,28 @@ hr {
     justify-content: space-between;
 }
 
-
-
-.bi-facebook {
-    color: #0744F2;
-    font-size: 2.5em;
+.bi-facebook,.bi-twitter{
+    color: #FEFEFE;
 }
 
-.bi-twitter {
+.bi-twitter{
+    margin-right: 1em;
+}
+
+
+
+
+
+.bi-facebook.fixsize {
+    color: #0744F2;
+    font-size: 2.5em;
+    margin-right: 0;
+}
+
+.bi-twitter.fixsize {
     color: #18CCF3;
     font-size: 2.5em;
+    margin-right: 0;
 }
 
 .bi-twitter:hover, .bi-facebook:hover {
@@ -441,7 +453,7 @@ hr {
 .nhapinput {
     width: 48%;
     border: 1px solid #DCDCDC;
-    padding-left: 2em;
+    padding-left: 1em;
     box-sizing: border-box;
     height: 3em;
 }
@@ -450,7 +462,8 @@ hr {
     width: 100%;
     height: 10em;
     border: 1px solid #DCDCDC;
-    padding-left: 2em;
+    padding-left: 1em;
+    padding-top: 1em;
     box-sizing: border-box;
 }
 

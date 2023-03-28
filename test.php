@@ -1,35 +1,97 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Mở trình duyệt nhỏ</title>
+    <style>
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    padding: 20px;
+  }
 
-<head>
-    <title>My Page</title>
-    <link rel="stylesheet" type="text/css" href="css/test.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
-        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
+  form {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 20px;
+  }
+
+  label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+  }
+
+  input[type="text"],
+  input[type="password"] {
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+  }
+
+  button {
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+
+  button:hover {
+    background-color: #3e8e41;
+  }
+</style>
+
+  </head>
+  <body>
+    <button onclick="openSmallWindow()">Mở trình duyệt nhỏ</button>
+
+    <script>
+      function openSmallWindow() {
+        // Tạo một cửa sổ pop-up nhỏ
+        var smallWindow = window.open("test2.php", "smallWindow", "width=400,height=400");
+
+        // Thêm một form đăng nhập vào cửa sổ pop-up
+        var loginForm = document.createElement("form");
+        var usernameLabel = document.createElement("label");
+        var usernameInput = document.createElement("input");
+        var passwordLabel = document.createElement("label");
+        var passwordInput = document.createElement("input");
+        var submitButton = document.createElement("button");
+        usernameLabel.innerHTML = "Tên đăng nhập:";
+        usernameInput.setAttribute("type", "text");
+        usernameInput.setAttribute("name", "username");
+        passwordLabel.innerHTML = "Mật khẩu:";
+        passwordInput.setAttribute("type", "password");
+        passwordInput.setAttribute("name", "password");
+        submitButton.innerHTML = "Đăng nhập";
+        loginForm.appendChild(usernameLabel);
+        loginForm.appendChild(usernameInput);
+        loginForm.appendChild(passwordLabel);
+        loginForm.appendChild(passwordInput);
+        loginForm.appendChild(submitButton);
+        smallWindow.document.body.appendChild(loginForm);
+
+        // Thêm sự kiện đăng nhập vào form
+        loginForm.addEventListener("submit", function(event) {
+          event.preventDefault();
+
+          // Lấy thông tin đăng nhập từ form
+          var username = usernameInput.value;
+          var password = passwordInput.value;
+
+          // Xử lý đăng nhập ở đây
+          console.log("Đăng nhập với tên đăng nhập: " + username + ", mật khẩu: " + password);
+
+          // Đóng cửa sổ pop-up
+          smallWindow.close();
+        });
+      }
     </script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
-        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
-    </script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
-        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
-    </script>
-</head>
-
-<body>
-<div id="myDiv">
-  Nội dung của tôi
-</div>
-<button onclick="toggleDisplay()">Ẩn/hiện</button>
-
-<script>
-    function toggleDisplay() {
-  var element = document.getElementById("myDiv");
-  element.classList.toggle("hide");
-}
-</script>
-
-</body>
-
+  </body>
 </html>

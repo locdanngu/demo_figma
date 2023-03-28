@@ -2,11 +2,11 @@
 <html>
 
 <head>
-    <title>Verify your email</title>
-    <link rel="stylesheet" type="text/css" href="css/verifyemailpage.css">
+    <title>Contact Us</title>
+    <link rel="stylesheet" type="text/css" href="css/contactuspage.css">
     <?php include('link.php'); ?>
 </head>
-<!-- http://localhost/WEBLUUANH/DEMO_FIGMA/verifyemailpage.php -->
+<!-- http://localhost/WEBLUUANH/DEMO_FIGMA/contactuspage.php -->
 
 <body>
     <nav class="navbar navbar-expand-lg">
@@ -57,22 +57,39 @@
     </nav>
 
     <div class="box box1">
-        <p class="headbox1">SIGN UP</p>
+        <p class="headbox1">CONTACT US</p>
     </div>
 
+    <p class="box box2">YOUR INFORMATION</p>
 
-    <div class="box box2">
-        <div class="khoi">
-            <div class="khoihead1">
-                <p class="headbox2">Verify your email address</p>
-            </div>
-            <div class="khoihead2">
-                <p class="bodybox2">Before proceeding, please check your email for a verification link. If you did not
-                    receive the email, <a href="#" class="linkanother">click here to request another.</a></p>
-                <button class="footbox2">OK</button>
+    <div class="box box3">
+        <form class="khoi" method="GET" action="#">
+            <div class="dau">
+                <div class="phantu1">
+                    <label>Your name: <span style="color: #D2000D;">*</span></label>
+                    <input class="inputbox3" required type="text" placeholder="Enter">
+                </div>
+                <div class="phantu1">
+                    <label>Your email: <span style="color: #D2000D;">*</span></label>
+                    <input class="inputbox3" required type="text" placeholder="Enter">
+                </div>
             </div>
 
-        </div>
+            <div class="phantu1 fixw">
+                <label>Subject: <span style="color: #D2000D;">*</span></label>
+                <input class="inputbox3" required type="text" placeholder="Enter">
+            </div>
+            <div class="phantu1 fixwh">
+                <label>Message:</label>
+                <textarea class="inputbox3 fixh"
+                    placeholder="I would like to know more about MS Robot/Selenium."></textarea>
+            </div>
+            <p class="txtbox3">This will send your message to us for more informations. We will answer your questions by
+                email within 24 hours.</p>
+            <input type="submit" value="Submit" class="btnbox3">
+
+
+        </form>
     </div>
 
     <?php include('foot.php'); ?>
