@@ -3,10 +3,10 @@
 
 <head>
     <title>Need Login First</title>
-    <link rel="stylesheet" type="text/css" href="css/logintoask.css">
+    <link rel="stylesheet" type="text/css" href="css/logintobasicsite.css">
     <?php include('link.php'); ?>
 </head>
-<!-- http://localhost/WEBLUUANH/DEMO_FIGMA/logintoask.php -->
+<!-- http://localhost/WEBLUUANH/DEMO_FIGMA/logintobasicsite.php -->
 
 <body>
     <nav class="navbar navbar-expand-lg">
@@ -22,13 +22,13 @@
                 <li class="nav-item">
                     <a class="nav-link" href="tutorialpage.php">Tutorial</a>
                 </li>
-                <li class="nav-item active">
+                <li class="nav-item ">
                     <a class="nav-link" href="forumpage.php">Forum</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="blogpage.php">Blog</a>
                 </li>
-                <li class="nav-item dropdown">
+                <li class="nav-item dropdown active">
                     <a class="nav-link" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
                         aria-haspopup="true" aria-expanded="false">
                         Demo Sites
@@ -59,17 +59,16 @@
 
 
     <div class="box box1">
-        <p class="headbox1">FORUM</p>
+        <p class="headbox1">BASIC SITE</p>
     </div>
 
     <div class="box box2">
-        <p class="tieudebox2">Ask a question</p>
-        <hr class="gachke">
+
 
         <p class="tieudeform">To login, provide your sign up email and password.
             If you are not sign up yet, please <a href="#" onclick="popupsignup()" class="clickhere">click here to
                 signup ></a></p>
-        <form method="POST" class="formbox2" action="askquestionpage.php">
+        <form method="POST" class="formbox2" action="basicsitepage.php">
             <p class="txtbox2">Email: <span style="color: #D2000D">*</span></p>
             <input type="text" class="inputbox2" placeholder="Email" required>
             <p class="txtbox2">Password: <span style="color: #D2000D">*</span></p>

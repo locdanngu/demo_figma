@@ -76,7 +76,6 @@ window.onclick = function(event) { //Xử lí sự kiện khi bấm ngoài pop u
         modalresetpass.style.display = "none";
     }
 
-
     if (event.target == modalfeedback) {
         modalfeedback.style.display = "none";
     }

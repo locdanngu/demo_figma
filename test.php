@@ -1,97 +1,73 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
 <html>
-  <head>
-    <meta charset="UTF-8">
-    <title>Mở trình duyệt nhỏ</title>
+
+<head>
     <style>
-  body {
-    font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
-    padding: 20px;
-  }
+    #div1,
+    #div2,
+    #div3,
+    #div4 {
+        float: left;
+        width: 200px;
+        height: 72px;
+        margin: 10px;
+        padding: 10px;
+        border: 1px solid #aaaaaa;
+    }
+    </style>
+    
+</head>
 
-  form {
-    background-color: #fff;
-    border: 1px solid #ccc;
-    padding: 20px;
-  }
+<body>
 
-  label {
-    display: block;
-    margin-bottom: 10px;
-    font-weight: bold;
-  }
+    <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
+        <img src="https://webvn.com/wp-content/uploads/2014/10/wvnlogo.png" draggable="true" ondragstart="drag(event)"
+            id="drag1" width="200" height="72">
+    </div>
 
-  input[type="text"],
-  input[type="password"] {
-    width: 100%;
-    padding: 5px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    box-sizing: border-box;
-  }
+    <div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)">
+        <img src="image/avatarus1.png" draggable="true" ondragstart="drag(event)" id="drag2" width="200" height="72">
+    </div>
+    <div id="div3" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+    <div id="div4" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
 
-  button {
-    background-color: #4caf50;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    font-weight: bold;
-    cursor: pointer;
-  }
-
-  button:hover {
-    background-color: #3e8e41;
-  }
-</style>
-
-  </head>
-  <body>
-    <button onclick="openSmallWindow()">Mở trình duyệt nhỏ</button>
 
     <script>
-      function openSmallWindow() {
-        // Tạo một cửa sổ pop-up nhỏ
-        var smallWindow = window.open("test2.php", "smallWindow", "width=400,height=400");
+    function allowDrop(ev) {
+        ev.preventDefault();
+    }
 
-        // Thêm một form đăng nhập vào cửa sổ pop-up
-        var loginForm = document.createElement("form");
-        var usernameLabel = document.createElement("label");
-        var usernameInput = document.createElement("input");
-        var passwordLabel = document.createElement("label");
-        var passwordInput = document.createElement("input");
-        var submitButton = document.createElement("button");
-        usernameLabel.innerHTML = "Tên đăng nhập:";
-        usernameInput.setAttribute("type", "text");
-        usernameInput.setAttribute("name", "username");
-        passwordLabel.innerHTML = "Mật khẩu:";
-        passwordInput.setAttribute("type", "password");
-        passwordInput.setAttribute("name", "password");
-        submitButton.innerHTML = "Đăng nhập";
-        loginForm.appendChild(usernameLabel);
-        loginForm.appendChild(usernameInput);
-        loginForm.appendChild(passwordLabel);
-        loginForm.appendChild(passwordInput);
-        loginForm.appendChild(submitButton);
-        smallWindow.document.body.appendChild(loginForm);
+    function drag(ev) {
+        ev.dataTransfer.setData("image", ev.target.id);
+    }
 
-        // Thêm sự kiện đăng nhập vào form
-        loginForm.addEventListener("submit", function(event) {
-          event.preventDefault();
+    // function drop(ev) {
+    // ev.preventDefault();
 
-          // Lấy thông tin đăng nhập từ form
-          var username = usernameInput.value;
-          var password = passwordInput.value;
+    // var data = ev.dataTransfer.getData("image");
+    // ev.target.appendChild(document.getElementById(data));
+    // }
 
-          // Xử lý đăng nhập ở đây
-          console.log("Đăng nhập với tên đăng nhập: " + username + ", mật khẩu: " + password);
+    function drop(ev) {
+        ev.preventDefault();
+        var data = ev.dataTransfer.getData(
+        "image"); //Lấy dữ liệu đang được kéo từ thuộc tính dataTransfer và lưu trữ nó vào biến data.
+        var targetElem = ev.target; //Lấy phần tử mục tiêu đang được thả vào và lưu trữ nó vào biến targetElem.
 
-          // Đóng cửa sổ pop-up
-          smallWindow.close();
-        });
-      }
+        if (targetElem.tagName.toLowerCase() === "img") {
+            //Nếu phần tử mục tiêu là một hình ảnh (img), lấy phần tử cha của hình ảnh được kéo và phần tử cha của hình ảnh mục tiêu
+            var sourceParent = document.getElementById(data).parentNode;
+            var targetParent = targetElem.parentNode;
+
+            // Hoán đổi hai hình ảnh bằng cách thay thế các nút cha của chúng
+            targetParent.appendChild(document.getElementById(data));
+            sourceParent.appendChild(targetElem);
+        // } else {
+        //     // Nếu không, thêm hình ảnh được kéo vào khu vực thả như trước đó.
+        //     targetElem.appendChild(document.getElementById(data));
+        }
+    }
     </script>
-  </body>
+</body>
+
 </html>

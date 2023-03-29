@@ -34,10 +34,10 @@
                         Demo Sites
                     </a>
                     <div class="dropdown-menu fixdr" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="basicsite.php">Basic Site</a>
-                        <a class="dropdown-item" href="automationpracticesite.php">Automation Practice Site</a>
-                        <a class="dropdown-item" href="automationactionssite.php">Automation Actions Site</a>
-                        <a class="dropdown-item" href="ecommercesite">Ecommerce Site</a>
+                        <a class="dropdown-item" href="logintobasicsite.php">Basic Site</a>
+                        <a class="dropdown-item" href="logintoautomationpracticesite.php">Automation Practice Site</a>
+                        <a class="dropdown-item" href="logintoautomationactionssite.php">Automation Actions Site</a>
+                        <a class="dropdown-item" href="logintoecommercesite.php">Ecommerce Site</a>
                     </div>
                 </li>
                 <li class="nav-item dropdown">
