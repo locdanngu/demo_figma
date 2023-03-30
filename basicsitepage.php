@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>Verify your email</title>
+    <title>Basic Site</title>
     <link rel="stylesheet" type="text/css" href="css/basicsitepage.css">
     <?php include('link.php'); ?>
 </head>
@@ -152,7 +152,7 @@
     </div>
 
 
-    <div class="box4">
+    <form class="box4" method="POST" action="#">
         <p class="namebox4">Registration Form</p>
         <div class="headbox4">
             <div class="leftbox4">
@@ -164,17 +164,55 @@
                 <input type="text" required placeholder="First Name" class="inputbox4">
                 <input type="text" required placeholder="Last Name" class="inputbox4">
                 <div class="radiobtn">
-                    <label class="colorradio1"><input type="radio" name="option" value="Single" required class="btnrd">Single</label>
-                    <label class="colorradio1"><input type="radio" name="option" value="Married" class="btnrd">Married</label>
-                    <label class="colorradio1"><input type="radio" name="option" value="Divorced" class="btnrd">Divorced</label>
+                    <label class="colorradio1"><input type="radio" name="option" value="Single" required
+                            class="btnrd">Single</label>
+                    <label class="colorradio1"><input type="radio" name="option" value="Married"
+                            class="btnrd">Married</label>
+                    <label class="colorradio1"><input type="radio" name="option" value="Divorced"
+                            class="btnrd">Divorced</label>
                 </div>
-                <div class="checkboxbtn">
+                <div class="radiobtn">
+                    <label class="colorradio1 fix"><input type="checkbox" name="option" value="Single" required
+                            class="btnrd">Cooking</label>
+                    <label class="colorradio1 fix"><input type="checkbox" name="option" value="Married"
+                            class="btnrd">Reading</label>
+                    <label class="colorradio1 fix"><input type="checkbox" name="option" value="Divorced"
+                            class="btnrd">Dancing</label>
+                    <label class="colorradio1 fix"><input type="checkbox" name="option" value="Divorced"
+                            class="btnrd">Writing</label>
+                </div>
 
-                </div>
             </div>
-        </div>
 
-    </div>
+        </div>
+        <div class="in4box4">
+            <p class="txtbox4">Country</p>
+            <select class="inputin4">
+                <option value="Aruba" selected>Aruba</option>
+                <option value="Aruba">Aruba</option>
+                <option value="Aruba">Aruba</option>
+            </select>
+
+            <p class="txtbox4">Your Email Address(*)</p>
+            <input type="text" required placeholder="" class="inputin4">
+            <p class="txtbox4">Your Phone Number (*)</p>
+            <input type="text" required placeholder="" class="inputin4">
+            <p class="txtbox4">Your Profile Picture (required)</p>
+            <input type="file" placeholder="Choose File">
+            <p class="txtbox4">Selenium Commands</p>
+            <select class="form-select inputin4" size="3" aria-label="size 3 select example">
+                <option value="Browser Commands">Browser Commands</option>
+                <option value="Navigation Commands">Navigation Commands</option>
+                <option value="Switch Commands">Switch Commands</option>
+                <option value="Switch Commands">Switch Commands</option>
+                <option value="Switch Commands">Switch Commands</option>
+            </select>
+            <p class="txtbox4">About Yourself</p>
+            <textarea class="abys"></textarea>
+            <input type="submit" value="Submit" class="subbox4">
+        </div>
+        
+    </form>
 
 
 

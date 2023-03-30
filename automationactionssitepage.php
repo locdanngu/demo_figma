@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>Verify your email</title>
+    <title>Automation Actions Site</title>
     <link rel="stylesheet" type="text/css" href="css/automationactionssitepage.css">
     <?php include('link.php'); ?>
 </head>

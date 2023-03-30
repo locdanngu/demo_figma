@@ -11,42 +11,71 @@
         </div>
 
         <hr class="duongthang">
-        <form class="bodypopup" method="POST" action="verifyemailpage.php">
-
-            <input type="text" id="email" name="email" placeholder="Email" class="oinput" required>
-
-
-            <input type="password" id="password" name="password" placeholder="Password" class="oinput passin" required>
-
-
-            <input type="password" id="password" name="password2" placeholder="Verify password" class="oinput passin"
-                required>
-
+        <form class="bodypopup" method="POST" action="verifyemailpage.php" onsubmit="return checkthongtindangky()">
+            <input type="email" id="emaildangky" name="emaildangky" placeholder="Email" class="oinput" required
+                pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" title="Vui lòng nhập đúng định dạng email">
+            <!-- Câu lệnh trên kiểm tra tính hợp lệ của email nhập vào  -->
+            <input type="password" id="passworddangky" name="passworddangky" placeholder="Password"
+                class="oinput passin" required pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,16}$"
+                title="Vui lòng nhập mật khẩu có độ dài từ 8 đến 16 ký tự, bao gồm ít nhất một chữ thường, một chữ hoa và một chữ số">
+            <!-- Câu lệnh trên kiểm tra tính hợp lệ của mật khẩu nhập vào -->
+            <input type="password" id="passworddangky2" name="passworddangky2" placeholder="Verify password"
+                class="oinput passin" required>
             <p class="product">Please use this email & password to login our Demo Sites when using Selenium Test
                 Automation.</p>
-
             <div class="checkboxandtxt">
                 <input type="checkbox" required>
                 <p class="txtcheck">Yes! I want to receive emails with Selenium Tips and ebook!</p>
             </div>
-
-
             <input type="submit" value="Sign up" class="btnsign">
-
             <div class="thoathuan">
                 <p>By signing up, you agree to our <a href="#">Terms of Use</a> and <a href="#">Privacy Policy.</a>
                 </p>
             </div>
         </form>
-
         <hr class="duongthang">
         <div class="thoathuan">
             <p>Already have an account? <span id="popuplogin" class="linklogin" onclick="popuplogin()">Log In</span>
             </p>
         </div>
-
     </div>
 </div>
+
+
+<!-- Gửi mail -->
+<?php
+		if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+			require("PHPMailer-master/src/PHPMailer.php");
+			require("PHPMailer-master/src/SMTP.php");
+			require("PHPMailer-master/src/Exception.php");
+
+			$email = $_POST['emaildangky'];
+
+			$mail = new PHPMailer\PHPMailer\PHPMailer();
+			$mail->IsSMTP(); // enable SMTP
+
+			$mail->SMTPDebug = 2; // debugging: 1 = errors and messages, 2 = messages only
+			$mail->SMTPAuth = true; // authentication enabled
+			$mail->SMTPSecure = 'ssl'; // secure transfer enabled REQUIRED for Gmail
+			$mail->Host = "smtp.gmail.com";
+			$mail->Port = 465; // or 587
+			$mail->IsHTML(true);
+			$mail->Username = "tranvanloc96lhp@gmail.com";
+			$mail->Password = "xjcebhdgwsyqwhlk";
+			$mail->SetFrom("tranvanloc96lhp@gmail.com");
+			$mail->Subject = "Verify your email address";
+			$mail->Body = "hello lộc";
+			$mail->AddAddress($email);
+
+			if(!$mail->Send()){
+				echo "<p>Mailer Error: " . $mail->ErrorInfo . "</p>";
+			}else{
+				echo "<p>Message has been sent to " . $email . "</p>";
+			}
+		}
+	?>
+
+
 
 <!-- modal login -->
 <div id="myModal2" class="modal">
@@ -55,30 +84,22 @@
             <h2 class="headsignup">Log in to your <span style="color: #0744F2">Ms.Robot</span> account!</h2>
             <span class="close">&times;</span>
         </div>
-
         <hr class="duongthang">
         <form class="bodypopup" method="POST">
-
             <input type="text" id="email" name="email" placeholder="Email" class="oinput" required>
-
-
-            <input type="password" id="password" name="password" placeholder="Password" class="oinput passin" required>
-
-
-
+            <input type="password" id="passworddangnhap" name="passworddangnhap" placeholder="Password"
+                class="oinput passin" required pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,16}$"
+                title="Vui lòng nhập mật khẩu có độ dài từ 8 đến 16 ký tự, bao gồm ít nhất một chữ thường, một chữ hoa và một chữ số">
             <input type="submit" value="Login" class="btnsign">
-
             <div class="thoathuan">
                 <p>or <a href="#" onclick="popupfgp()">Forgot password</a>
                 </p>
             </div>
         </form>
-
         <hr class="duongthang">
         <div class="thoathuan">
             <p>Don't have an account? <span onclick="popupsignup()" class="linklogin">Sign up</span></p>
         </div>
-
     </div>
 </div>
 
@@ -89,48 +110,47 @@
             <h2 class="headsignup">Forgot password <span style="color: #0744F2">Ms.Robot</span> account!</h2>
             <span class="close">&times;</span>
         </div>
-
         <hr class="duongthang">
-        <div class="bodypopup">
-
-            <input type="text" id="email" name="email" placeholder="Email" class="oinput" required>
+        <form class="bodypopup" method="POST" action="#">
+            <input type="email" id="emailtimlai" name="emailtimlai" placeholder="Email" class="oinput" required
+                pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" title="Vui lòng nhập đúng định dạng email">
             <img src="image/recaptcha.png">
             <input type="submit" value="Reset password" class="btnsign" onclick="popupresetpass()">
-
             <div class="thoathuan">
                 <p>or <a href="#" onclick="popuplogin()">Login</a>
                 </p>
             </div>
-        </div>
-
-
-
+        </form>
     </div>
 </div>
+
+
+<!-- Gửi mail -->
+
+
+
+
+
+
+
+
+
+
 
 <!-- modal reset password -->
 <div id="myModal4" class="modal">
     <div class="modal-content">
         <div class="headpopup">
             <h2 class="headsignup">Reset password</h2>
-
         </div>
-
         <hr class="duongthang">
         <form class="bodypopup" method="POST">
-
             <input type="password" id="password" name="password" placeholder="New password" class="oinput passin"
                 required>
-
             <input type="password" id="password" name="password" placeholder="Verify password" class="oinput passin"
                 required>
             <input type="submit" value="Submit" class="btnsign">
-
-
         </form>
-
-
-
     </div>
 </div>
 
@@ -142,7 +162,6 @@
             <h2 class="headsignup">Your feedback!</h2>
             <span class="close">&times;</span>
         </div>
-
         <hr class="duongthang">
         <form class="bodypopup" method="POST">
             <p class="txtfeedback">How do you feel about our website?</p>
@@ -172,10 +191,7 @@
                     <img src="image/vector10.png" class="imgvector2">
                     <p class="txtvector">love</p>
                 </div>
-
-
             </div>
-
             <p class="txtfeedback">How like are you to recommend our company/product/service to your friends and
                 colleagues?</p>
             <div class="radio">
@@ -190,25 +206,15 @@
                 <label class="colorradio"><input type="radio" name="option" value="9">9</label>
                 <label class="colorradio"><input type="radio" name="option" value="10">10</label>
             </div>
-
-
             <div class="radio2">
                 <p>not at all</p>
                 <p>very likely</p>
             </div>
-
-
             <p class="txtfeedback">Tell us what you like about our website</p>
             <input type="text" id="password" name="password" placeholder="The great experience" class="oinput nor"
                 required>
-
             <input type="submit" value="Submit" class="btnsign">
-
-
         </form>
-
-
-
     </div>
 </div>
 
@@ -220,20 +226,12 @@
             <h2 class="headsignup">Select the question category</h2>
             <span class="close">&times;</span>
         </div>
-
         <hr class="duongthang">
         <div class="bodypopup">
-
             <p class="tieudeqs">1. Special catalog, you will be expertly answered by our experts.</p>
             <a class="btnsign2" href="logintoask.php">Q & A with Our Test Automation Architect team</a>
             <p class="tieudeqs">2. Free catalogory, you can ask all questions here. No login required.</p>
-
             <a class="btnsign2 black" href="#">General Discussion</a>
-
-
         </div>
-
-
-
     </div>
 </div>

@@ -1,5 +1,5 @@
 body {
-    /* background-color: #FBFEFF !important; */
+    background-color: #FBFEFF !important;
     font-family: 'Circular Std';
     font-style: normal;
 }
@@ -489,30 +489,6 @@ input[type=checkbox]:checked:after {
     text-align: center;
 }
 
-.radiobtn{
-    width: 80%;
-    margin-top: 1.5em;
-    display: flex;
-    /* justify-content: space-between; */
-}
-
-.colorradio2 {
-    
-    display: flex;
-    color: #0744F2;
-    font-family: 'Circular Std';
-    font-style: normal;
-    font-weight: 500;
-    font-size: 15px;
-    line-height: 20px;
-    text-align: center;
-}
-
-.btnrd{
-    margin-bottom: 6px;
-    margin-right: 0.75em;
-}
-
 .radio2 {
     width: 100%;
     display: flex;
@@ -590,158 +566,43 @@ hr {
 }
 
 .box2{
-padding-left: 12.5%;
-padding-right: 12.5%;
-
+    margin-top: 5em;
 }
 
 .headbox2{
-    height: 3em;
-    display: flex;
-    margin-top: 5em;
-}
 
-.city{
-    margin: 0 !important;
-    width: 25%;
-    display: flex;
     font-weight: 500;
-font-size: 18px;
-line-height: 22px;
-/* identical to box height */
+font-size: 30px;
+line-height: 37px;
 
-
-color: #666666;
-    justify-content: center;
-    align-items: center;
-    background: #F5F5F5;
-    cursor: pointer;
-border: 1px solid #D9D9D9;
-
-
-}
-.city.active{
-    background: #FFFFFF;
-}
-
-.city:hover{
-    opacity: 0.7;
-}
-
-.city.active:hover{
-    opacity: 1;
+color: #000000;
 }
 
 .bodybox2{
-    display: none;
-    background: #FFFFFF;
-border: 1px solid #D9D9D9;
-padding: 3em;
+    font-weight: 300;
+font-size: 18px;
+line-height: 22px;
+
+color: #000000;
+margin-top: 3em;
+margin-bottom: 3em;
 }
 
-.bodybox2.active{
-    display: block;
+.headbox3{
+    font-weight: 400;
+font-size: 24px;
+line-height: 29px;
+/* identical to box height */
+
+
+color: #000000;
+}
+
+.if{
+    width: 100%;
+    height: 50vw;
 }
 
 .box3{
-    display: flex;
-    padding-left: 12.5%;
-    padding-right: 12.5%;
-    margin-top: 5em;
-    justify-content: space-between;
+    margin-top: 3em;
 }
-
-.khoibox3{
-    width: 24%;
-    display: flex;
-    flex-direction: column;
-
-}
-
-.box4{
-    padding-left: 12.5%;
-    padding-right: 12.5%;
-    margin-top: 5em;
-}
-
-.namebox4{
-    font-weight: 700;
-font-size: 24px;
-
-
-color: #000000;
-
-}
-
-.headbox4{
-    display: flex;
-    width: 80%;
-    justify-content: space-between;
-}
-
-.txtbox4{
-    font-weight: 700;
-font-size: 14px;
-line-height: 40px;
-
-color: #000000;
-}
-
-.inputbox4{
-    background: #FFFFFF;
-border: 0.5px solid #666666;
-height: 2.5em;
-width: 45%;
-border-radius: 0.25em;
-margin-right: 1em;
-padding-left: 1em;
-}
-
-.colorradio1{
-    margin-right: 1em;
-}
-
-
-
-.leftbox4{
-    width: 13%;
-}
-
-.rightbox4{
-    width: 75%;
-}
-
-.in4box4{
-    width: 25%;
-}
-
-.inputin4{
-    width: 100%;
-    margin-bottom: 1em;
-    padding-left: 0.5em;
-}
-
-.abys{
-    width: 100%;
-    padding-left: 0.5em;
-    height: 10em;
-}
-
-.subbox4{
-    background: #FFFFFF;
-border: 0.5px solid #666666;
-box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.2);
-font-weight: 300;
-font-size: 12px;
-cursor: pointer;
-width: 25%;
-margin-top: 5em;
-height: 2.5em;
-color: #000000;
-}
-
-.subbox4:hover{
-    background: #000000;
-    color: #FFFFFF;
-}
-

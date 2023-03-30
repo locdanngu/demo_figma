@@ -66,11 +66,11 @@
             <div class="khoihead1">
                 <p class="headbox2">Verify your email address</p>
             </div>
-            <div class="khoihead2">
+            <form class="khoihead2" action="https://accounts.google.com/">
                 <p class="bodybox2">Before proceeding, please check your email for a verification link. If you did not
                     receive the email, <a href="#" class="linkanother">click here to request another.</a></p>
                 <button class="footbox2">OK</button>
-            </div>
+            </form>
 
         </div>
     </div>

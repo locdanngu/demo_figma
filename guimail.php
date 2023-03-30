@@ -1,17 +1,4 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Send Email</title>
-</head>
-<body>
-	<h1>Send Email</h1>
-	<form method="post">
-		<label for="email">Email address:</label>
-		<input type="email" id="email" name="email" required><br><br>
-		<input type="submit" value="Send">
-	</form>
-
-	<?php
+<?php
 		if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 			require("PHPMailer-master/src/PHPMailer.php");
 			require("PHPMailer-master/src/SMTP.php");
@@ -42,5 +29,3 @@
 			}
 		}
 	?>
-</body>
-</html>

@@ -37,7 +37,7 @@
                         <a class="dropdown-item" href="logintobasicsite.php">Basic Site</a>
                         <a class="dropdown-item" href="logintoautomationpracticesite.php">Automation Practice Site</a>
                         <a class="dropdown-item" href="logintoautomationactionssite.php">Automation Actions Site</a>
-                        <a class="dropdown-item" href="logintoecommercesite.php">Ecommerce Site</a>>
+                        <a class="dropdown-item" href="logintoecommercesite.php">Ecommerce Site</a>
                     </div>
                 </li>
                 <li class="nav-item dropdown">

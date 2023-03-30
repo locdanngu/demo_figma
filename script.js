@@ -124,3 +124,16 @@ imageContainers.forEach((container) => {
         container.classList.add('selected');
     });
 });
+
+
+
+//check thông tin nhập vào form đăng ký đúng chưa
+function checkthongtindangky() {
+    var passworddangky = document.getElementById("passworddangky").value;
+    var passworddangky2 = document.getElementById("passworddangky2").value;
+    if (passworddangky != passworddangky2) {
+        alert("Mật khẩu nhập lại không đúng");
+        return false;
+    }
+    return true;
+}

@@ -2,11 +2,11 @@
 <html>
 
 <head>
-    <title>Need Login First</title>
-    <link rel="stylesheet" type="text/css" href="css/logintobasicsite.css">
+    <title>Automation Practice Site</title>
+    <link rel="stylesheet" type="text/css" href="css/automationpracticesitepage.css">
     <?php include('link.php'); ?>
 </head>
-<!-- http://localhost/WEBLUUANH/DEMO_FIGMA/logintoecommercesite.php -->
+<!-- http://localhost/WEBLUUANH/DEMO_FIGMA/automationpracticepage.php -->
 
 <body>
     <nav class="navbar navbar-expand-lg">
@@ -56,26 +56,35 @@
         </div>
     </nav>
 
-
-
     <div class="box box1">
-        <p class="headbox1">ECOMMERCE SITE</p>
+        <p class="headbox1">AUTOMATION PRACTICE SITE</p>
     </div>
 
     <div class="box box2">
-
-
-        <p class="tieudeform">To login, provide your sign up email and password.
-            If you are not sign up yet, please <a href="#" onclick="popupsignup()" class="clickhere">click here to
-                signup ></a></p>
-        <form method="POST" class="formbox2" action="ecommercesitepage.php">
-            <p class="txtbox2">Email: <span style="color: #D2000D">*</span></p>
-            <input type="text" class="inputbox2" placeholder="Email" required>
-            <p class="txtbox2">Password: <span style="color: #D2000D">*</span></p>
-            <input type="password" class="inputbox2" placeholder="Enter" required>
-            <input type="submit" value="Login" class="btnbox2">
-        </form>
+        <p class="headbox2">Sample Iframe page</p>
+        <p class="headbox2">Test page to practice your Iframe related coding skills.</p>
+        <p class="bodybox2">There are 3 Iframes in this page. You can switch between them from parent frame to child
+            iframe.</p>
+        <p class="bodybox2">Use these frames to practice your skills.</p>
     </div>
+
+    <div class="box box3">
+        <p class="headbox3">Iframe 1</p>
+        <iframe src="https://codelearn.io" class="if" frameborder="1"></iframe>
+    </div>
+
+    <div class="box box3">
+        <p class="headbox3">Iframe 2</p>
+        <iframe src="https://blog.luyencode.net/" class="if" frameborder="1"></iframe>
+    </div>
+
+    <div class="box box3">
+        <p class="headbox3">Iframe 3</p>
+        <iframe src="https://www.guru99.com/alert-popup-handling-selenium.html" class="if" frameborder="1"></iframe>
+    </div>
+
+
+
 
     <?php include('foot.php'); ?>
 

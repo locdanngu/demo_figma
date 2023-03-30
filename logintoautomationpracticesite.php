@@ -68,7 +68,7 @@
         <p class="tieudeform">To login, provide your sign up email and password.
             If you are not sign up yet, please <a href="#" onclick="popupsignup()" class="clickhere">click here to
                 signup ></a></p>
-        <form method="POST" class="formbox2" action="automationpracticesite.php">
+        <form method="POST" class="formbox2" action="automationpracticesitepage.php">
             <p class="txtbox2">Email: <span style="color: #D2000D">*</span></p>
             <input type="text" class="inputbox2" placeholder="Email" required>
             <p class="txtbox2">Password: <span style="color: #D2000D">*</span></p>
