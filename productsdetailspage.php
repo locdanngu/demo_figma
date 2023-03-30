@@ -2,11 +2,11 @@
 <html>
 
 <head>
-    <title>Verify your email</title>
-    <link rel="stylesheet" type="text/css" href="css/verifyemailpage.css">
+    <title>Products Details</title>
+    <link rel="stylesheet" type="text/css" href="css/productsdetailspage.css">
     <?php include('link.php'); ?>
 </head>
-<!-- http://localhost/WEBLUUANH/DEMO_FIGMA/verifyemailpage.php -->
+<!-- http://localhost/WEBLUUANH/DEMO_FIGMA/productsdetailspage.php -->
 
 <body>
     <nav class="navbar navbar-expand-lg">
@@ -16,7 +16,7 @@
         </a>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav align-items-center">
-                <li class="nav-item active">
+                <li class="nav-item">
                     <a class="nav-link" href="homepage.php">Home</a>
                 </li>
                 <li class="nav-item">
@@ -28,7 +28,7 @@
                 <li class="nav-item">
                     <a class="nav-link" href="blogpage.php">Blog</a>
                 </li>
-                <li class="nav-item dropdown">
+                <li class="nav-item dropdown active">
                     <a class="nav-link" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
                         aria-haspopup="true" aria-expanded="false">
                         Demo Sites
@@ -57,23 +57,49 @@
     </nav>
 
     <div class="box box1">
-        <p class="headbox1">SIGN UP</p>
+        <p class="headbox1">ECOMMERCE SITE</p>
     </div>
 
-
-    <div class="box box2">
-        <div class="khoi">
-            <div class="khoihead1">
-                <p class="headbox2">Verify your email address</p>
+    <div class="box2">
+        <div class="leftbox2">
+            <a href="ecommercesitepage.php" class="linkhome">Home</a>
+            <i class="bi bi-chevron-right"></i>
+            <p class="tensp">Galaxy S8</p>
+        </div>
+        <div class="rightbox2">
+            <p class="needhelp">Need Help Ordering?</p>
+            <div class="bodyrightbox2">
+                <i class="bi bi-telephone-fill"></i>
+                <p class="tensp">+235 793-891-7938</p>
             </div>
-            <form class="khoihead2" action="https://mail.google.com/mail/">
-                <p class="bodybox2">Before proceeding, please check your email for a verification link. If you did not
-                    receive the email, <a href="#" class="linkanother">click here to request another.</a></p>
-                <button class="footbox2">OK</button>
-            </form>
-
         </div>
     </div>
+
+    <div class="box2 box3">
+        <img src="image/bigss.png" class="imgsp">
+        <div class="rightbox3">
+            <div class="headrightbox3">
+                <p class="namesp">Galaxy Galaxy S8</p>
+                <div class="rate">
+                    <img src="image/rate.png" class="imgrate">
+                    <span class="numrate">6376</span>
+                </div>
+                <p class="chitietsp">The Galaxy S8 expansive display stretches from edge to edge, giving you the most
+                    amount
+                    of screen in the least amount of space. And the Galaxy S8+ is even more expansive — our biggest
+                    screen
+                    yet.¹</p>
+            </div>
+            <div class="footrightbox3">
+                <p class="soluong">Quantity</p>
+
+                <p class="giasp">$649.99</p>
+                <button class="addtocart"><span class="add">Add to cart</span><i class="bi bi-chevron-right fix"></i></button>
+            </div>
+        </div>
+    </div>
+
+
 
     <?php include('foot.php'); ?>
 

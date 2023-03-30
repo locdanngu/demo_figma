@@ -62,7 +62,7 @@
 
     <div class="box box2">
         <div class="leftbox2">
-            <a href="#" class="osp">
+            <a href="productsdetailspage.php" class="osp">
                 <div class="headsp">
                     <img src="image/sp1.png" class="imgsp">
                 </div>

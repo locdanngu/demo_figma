@@ -137,3 +137,13 @@ function checkthongtindangky() {
     }
     return true;
 }
+
+function checkthongtinresetpass() {
+    var passwordreset = document.getElementById("passwordreset").value;
+    var passwordreset2 = document.getElementById("passwordreset2").value;
+    if (passwordreset != passwordreset2) {
+        alert("Mật khẩu nhập lại không đúng");
+        return false;
+    }
+    return true;
+}

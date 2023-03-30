@@ -1,10 +1,11 @@
+<!-- Gửi mail đăng ký  -->
 <?php
 		if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 			require("PHPMailer-master/src/PHPMailer.php");
 			require("PHPMailer-master/src/SMTP.php");
 			require("PHPMailer-master/src/Exception.php");
 
-			$email = $_POST['email'];
+			$email = $_POST['emaildangky'];
 
 			$mail = new PHPMailer\PHPMailer\PHPMailer();
 			$mail->IsSMTP(); // enable SMTP

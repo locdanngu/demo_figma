@@ -192,9 +192,14 @@ nav {
     width: 25%;
     height: 2.75em;
     border-radius: 5px;
+    cursor: pointer;
     color: #FFFFFF;
     background-color: #0744F2;
 
+}
+
+.btnbox1:hover{
+    opacity: 0.8;
 }
 
 .boxx {
