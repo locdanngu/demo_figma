@@ -197,11 +197,26 @@
             <span class="close">&times;</span>
         </div>
         <hr class="duongthang">
+        <?php
+        if(!empty($username)){
+        ?>
+        <div class="bodypopup">
+            <p class="tieudeqs">1. Special catalog, you will be expertly answered by our experts.</p>
+            <a class="btnsign2" href="askquestionpage.php">Q & A with Our Test Automation Architect team</a>
+            <p class="tieudeqs">2. Free catalogory, you can ask all questions here. No login required.</p>
+            <a class="btnsign2 black" href="askquestionpage.php">General Discussion</a>
+        </div>
+        <?php
+        }else{
+        ?>
         <div class="bodypopup">
             <p class="tieudeqs">1. Special catalog, you will be expertly answered by our experts.</p>
             <a class="btnsign2" href="logintoask.php">Q & A with Our Test Automation Architect team</a>
             <p class="tieudeqs">2. Free catalogory, you can ask all questions here. No login required.</p>
-            <a class="btnsign2 black" href="#">General Discussion</a>
+            <a class="btnsign2 black" href="askquestionpage.php">General Discussion</a>
         </div>
+        <?php
+        }
+        ?>
     </div>
 </div>
