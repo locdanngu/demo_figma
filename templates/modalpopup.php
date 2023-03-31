@@ -53,8 +53,8 @@
             <span class="close">&times;</span>
         </div>
         <hr class="duongthang">
-        <form class="bodypopup" method="POST">
-            <input type="email" id="emaildangnhap" name="emailemaildangnhap" placeholder="Email" class="oinput" required
+        <form action="controller/login.php" class="bodypopup" method="POST">
+            <input type="email" id="emaildangnhap" name="emaildangnhap" placeholder="Email" class="oinput" required
                 pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" title="Vui lòng nhập đúng định dạng email">
             <input type="password" id="passworddangnhap" name="passworddangnhap" placeholder="Password"
                 class="oinput passin" required pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,16}$"

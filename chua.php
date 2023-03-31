@@ -4,7 +4,7 @@
 <head>
     <title>Verify your email</title>
     <link rel="stylesheet" type="text/css" href="css/automationactionssitepage.css">
-    <?php include('link.php'); ?>
+    <?php include('templates/link.php'); ?>
 </head>
 <!-- http://localhost/WEBLUUANH/DEMO_FIGMA/automationactionssitepage.php -->
 
@@ -63,12 +63,12 @@
 
     
 
-    <?php include('foot.php'); ?>
+    <?php include('templates/foot.php'); ?>
 
-    <?php include('modalpopup.php'); ?>
+    <?php include('templates/modalpopup.php'); ?>
 
     <script>
-    <?php include('script.js'); ?>
+    <?php include('templates/script.js'); ?>
     </script>
 
 

@@ -20,7 +20,7 @@
 			$mail->Password = "xjcebhdgwsyqwhlk";
 			$mail->SetFrom("tranvanloc96lhp@gmail.com");
 			$mail->Subject = "Verify your email address";
-			$mail->Body = "hello lộc";
+			$mail->Body = "Xin chào! Bạn đã đăng ký thành công. Vui lòng xác nhận địa chỉ email bằng cách nhấn vào đường link sau đây: ";
 			$mail->AddAddress($email);
 
 			if(!$mail->Send()){

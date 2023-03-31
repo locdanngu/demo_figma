@@ -25,10 +25,24 @@
             <p class="headcot">DEMO SITES</p>
             <hr>
             <div class="cotnho">
-                <a href="#" class="text1">Basic Demo Site</a>
-                <a href="#" class="text1">Automation Practice Site</a>
-                <a href="#" class="text1">Automation Action Site</a>
-                <a href="#" class="text1">E-commerce Demo Site</a>
+                <!-- <a href='logintobasicsite.php' class='text1'>Basic Demo Site</a>
+                <a href='logintoautomationpracticesite.php' class='text1'>Automation Practice Site</a>
+                <a href='logintoautomationactionssite.php' class='text1'>Automation Action Site</a>
+                <a href='logintoecommercesite.php' class='text1'>E-commerce Demo Site</a> -->
+
+                <?php
+                    if(!empty($username)){    
+                        echo "<a href='basicsitepage.php' class='text1'>Basic Demo Site</a>";
+                        echo "<a href='automationpracticesitepage.php' class='text1'>Automation Practice Site</a>";
+                        echo "<a href='automationactionssitepage.php' class='text1'>Automation Action Site</a>";
+                        echo "<a href='ecommercesitepage.php' class='text1'>E-commerce Demo Site</a>";
+                    }else{
+                        echo "<a href='logintobasicsite.php' class='text1'>Basic Demo Site</a>";
+                        echo "<a href='logintoautomationpracticesite.php' class='text1'>Automation Practice Site</a>";
+                        echo "<a href='logintoautomationactionssite.php' class='text1'>Automation Action Site</a>";
+                        echo "<a href='logintoecommercesite.php' class='text1'>E-commerce Demo Site</a>";
+                    }
+                ?>
             </div>
         </div>
         <div class="cot">

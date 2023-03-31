@@ -69,7 +69,7 @@ body {
 
 nav {
     padding-left: 7.5% !important;
-    padding-right: 7.5% !important;
+    /* padding-right: 7.5% !important; */
 }
 
 .navbar-collapse {
@@ -422,7 +422,7 @@ hr {
     font-family: 'Circular Std';
     font-style: normal;
     font-weight: 700;
-    font-size: 18px;
+    font-size: 16px;
     line-height: 27px;
     /* or 133% */
     margin-left: 1%;
@@ -495,7 +495,7 @@ hr {
     background: #FFFFFF;
     box-shadow: 0px 10px 14px rgba(7, 68, 242, 0.07);
     height: 4.25%;
-    margin-bottom: 2.5%;
+    margin-bottom: 2.75%;
 }
 
 .fix {
@@ -1036,3 +1036,23 @@ input[type="radio"] {
 .fixdr{
     left: -85% !important;
 }
+
+.emailandbtn{
+    display: flex;
+    flex-direction: column;
+    margin-left: 0.5em !important;
+}
+
+.avaandemail{
+    align-items: center;
+    display: flex;
+}
+
+.emailuser{
+    font-weight: 700;
+font-size: 14px;
+margin: 0 !important;
+color: #000000;
+
+}
+

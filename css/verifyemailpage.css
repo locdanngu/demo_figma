@@ -607,3 +607,22 @@ hr {
 .fixdr{
     left: -85% !important;
 }
+
+.emailandbtn{
+    display: flex;
+    flex-direction: column;
+    margin-left: 0.5em !important;
+}
+
+.avaandemail{
+    align-items: center;
+    display: flex;
+}
+
+.emailuser{
+    font-weight: 700;
+font-size: 14px;
+margin: 0 !important;
+color: #000000;
+
+}
