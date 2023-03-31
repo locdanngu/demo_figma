@@ -749,3 +749,11 @@ color: #3E3E3E;
 .osp:hover>.headsp{
     border: 0;
 }
+
+.dropdown-item{
+    text-align: center !important;
+}
+
+.fixdr{
+    left: -85% !important;
+}

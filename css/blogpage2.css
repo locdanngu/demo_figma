@@ -536,7 +536,13 @@ input[type=checkbox]:checked:after {
 
 
 
+.dropdown-item{
+    text-align: center !important;
+}
 
+.fixdr{
+    left: -85% !important;
+}
 
 
 

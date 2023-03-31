@@ -54,7 +54,8 @@
         </div>
         <hr class="duongthang">
         <form class="bodypopup" method="POST">
-            <input type="text" id="email" name="email" placeholder="Email" class="oinput" required>
+            <input type="email" id="emaildangnhap" name="emailemaildangnhap" placeholder="Email" class="oinput" required
+                pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" title="Vui lòng nhập đúng định dạng email">
             <input type="password" id="passworddangnhap" name="passworddangnhap" placeholder="Password"
                 class="oinput passin" required pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,16}$"
                 title="Vui lòng nhập mật khẩu có độ dài từ 8 đến 16 ký tự, bao gồm ít nhất một chữ thường, một chữ hoa và một chữ số">
@@ -113,11 +114,11 @@
         </div>
         <hr class="duongthang">
         <form class="bodypopup" method="POST" action="homepage.php" onsubmit="return checkthongtinresetpass()">
-            <input type="password" id="passwordreset" name="passwordreset" placeholder="Password"
-                class="oinput passin" required pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,16}$"
+            <input type="password" id="passwordreset" name="passwordreset" placeholder="Password" class="oinput passin"
+                required pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,16}$"
                 title="Vui lòng nhập mật khẩu có độ dài từ 8 đến 16 ký tự, bao gồm ít nhất một chữ thường, một chữ hoa và một chữ số">
-            <input type="password" id="passwordreset2" name="passwordreset2" placeholder="Verify password" class="oinput passin"
-                required>
+            <input type="password" id="passwordreset2" name="passwordreset2" placeholder="Verify password"
+                class="oinput passin" required>
             <input type="submit" value="Submit" class="btnsign">
         </form>
     </div>

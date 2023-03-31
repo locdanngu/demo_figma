@@ -606,3 +606,11 @@ color: #000000;
 .box3{
     margin-top: 3em;
 }
+
+.dropdown-item{
+    text-align: center !important;
+}
+
+.fixdr{
+    left: -85% !important;
+}

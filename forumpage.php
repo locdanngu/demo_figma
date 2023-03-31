@@ -87,7 +87,7 @@
             <div class="ctnqs">
                 <img src="image/imgqs.png" class="imgqs">
                 <div class="headqs">
-                    <a href="#" class="active txt">Do you see this question? Q & A with our Test Automation Architect
+                    <a href="forum-openquestionpage.php" class="active txt">Do you see this question? Q & A with our Test Automation Architect
                         team</a>
                     <p class="txt1">To start your self-learning, you need to learn for free on the internet. Its
                         recommendations are
@@ -113,7 +113,32 @@
             <div class="ctnqs">
                 <img src="image/imgqs.png" class="imgqs">
                 <div class="headqs">
-                    <a href="#" class="active txt">Do you see this question? Q & A with our Test Automation Architect
+                    <a href="forum-openquestionpage.php" class="active txt">Do you see this question? Q & A with our Test Automation Architect
+                        team</a>
+                    <p class="txt1">To start your self-learning, you need to learn for free on the internet. Its
+                        recommendations are
+                        based on a review of the existing academic literature which is complemented by the analysis of
+                        numerous contributions by software developers, self-learners, and teachers of programming.</p>
+                    <div class="foottxt">
+                        <p class="chumo">Asked in: <a href="#">Selenium</a></p>
+                        <p class="chumo">Asked by: <a href="#">Thao Le</a></p>
+                        <p class="chumo">Asked on: January 30, 2020</p>
+                    </div>
+                </div>
+                <div class="rightqs">
+                    <p class="gr">18</p>
+                    <p>Votes</p>
+                    <div class="ovuong">
+                        <p class="numaskqs">2</p>
+                        <p style="margin: 0 !important">Answers</p>
+                    </div>
+                    <p>3k Views</p>
+                </div>
+            </div>
+            <div class="ctnqs">
+                <img src="image/imgqs.png" class="imgqs">
+                <div class="headqs">
+                    <a href="forum-openquestionpage.php" class="active txt">Do you see this question? Q & A with our Test Automation Architect
                         team</a>
                     <p class="txt1">To start your self-learning, you need to learn for free on the internet. Its
                         recommendations are
@@ -139,7 +164,7 @@
             <div class="ctnqs">
                 <img src="image/imgqs.png" class="imgqs">
                 <div class="headqs">
-                    <a href="#" class="active txt">Do you see this question? Q & A with our Test Automation Architect
+                    <a href="forum-openquestionpage.php" class="active txt">Do you see this question? Q & A with our Test Automation Architect
                         team</a>
                     <p class="txt1">To start your self-learning, you need to learn for free on the internet. Its
                         recommendations are
@@ -165,7 +190,7 @@
             <div class="ctnqs">
                 <img src="image/imgqs.png" class="imgqs">
                 <div class="headqs">
-                    <a href="#" class="active txt">Do you see this question? Q & A with our Test Automation Architect
+                    <a href="forum-openquestionpage.php" class="active txt">Do you see this question? Q & A with our Test Automation Architect
                         team</a>
                     <p class="txt1">To start your self-learning, you need to learn for free on the internet. Its
                         recommendations are
@@ -191,7 +216,7 @@
             <div class="ctnqs">
                 <img src="image/imgqs.png" class="imgqs">
                 <div class="headqs">
-                    <a href="#" class="active txt">Do you see this question? Q & A with our Test Automation Architect
+                    <a href="forum-openquestionpage.php" class="active txt">Do you see this question? Q & A with our Test Automation Architect
                         team</a>
                     <p class="txt1">To start your self-learning, you need to learn for free on the internet. Its
                         recommendations are
@@ -217,33 +242,7 @@
             <div class="ctnqs">
                 <img src="image/imgqs.png" class="imgqs">
                 <div class="headqs">
-                    <a href="#" class="active txt">Do you see this question? Q & A with our Test Automation Architect
-                        team</a>
-                    <p class="txt1">To start your self-learning, you need to learn for free on the internet. Its
-                        recommendations are
-                        based on a review of the existing academic literature which is complemented by the analysis of
-                        numerous contributions by software developers, self-learners, and teachers of programming.</p>
-                    <div class="foottxt">
-                        <p class="chumo">Asked in: <a href="#">Selenium</a></p>
-                        <p class="chumo">Asked by: <a href="#">Thao Le</a></p>
-                        <p class="chumo">Asked on: January 30, 2020</p>
-                    </div>
-                </div>
-                <div class="rightqs">
-                    <p class="gr">18</p>
-                    <p>Votes</p>
-                    <div class="ovuong">
-                        <p class="numaskqs">2</p>
-                        <p style="margin: 0 !important">Answers</p>
-
-                    </div>
-                    <p>3k Views</p>
-                </div>
-            </div>
-            <div class="ctnqs">
-                <img src="image/imgqs.png" class="imgqs">
-                <div class="headqs">
-                    <a href="#" class="active txt">Do you see this question? Q & A with our Test Automation Architect
+                    <a href="forum-openquestionpage.php" class="active txt">Do you see this question? Q & A with our Test Automation Architect
                         team</a>
                     <p class="txt1">To start your self-learning, you need to learn for free on the internet. Its
                         recommendations are

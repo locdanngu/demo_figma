@@ -745,3 +745,10 @@ color: #000000;
     color: #FFFFFF;
 }
 
+.dropdown-item{
+    text-align: center !important;
+}
+
+.fixdr{
+    left: -85% !important;
+}

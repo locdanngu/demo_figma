@@ -89,14 +89,18 @@ window.onclick = function(event) { //Xử lí sự kiện khi bấm ngoài pop u
 
 const navbarDropdown = document.getElementById("navbarDropdown"); //lấy nút bấm dropdown trên thanh navbar
 const navbars = document.querySelector(".navbar-expand-lg"); //lấy thanh navbar
+const tieudebox1 = document.querySelector(".tieudebox1"); //lấy tiêu đề của box1
 
 navbarDropdown.addEventListener("click", function() { //thêm sự kiện khi bấm vào
     if (navbars.style.backgroundColor === "") { //toán tử so sánh kiểu và giá trị trong JavaScript
         navbars.style.backgroundColor = "transparent"; //biến đổi màu nav mất đi
         navbars.style.boxShadow = "none";
+        tieudebox1.style.width = "70%"; 
     } else {
         navbars.style.backgroundColor = ""; //trả lại màu nav như cũ
         navbars.style.boxShadow = "";
+        tieudebox1.style.width = "100%";
+
     }
 });
 
@@ -104,6 +108,7 @@ document.addEventListener("click", function(e) { //nếu click bên ngoài nút 
     if (e.target !== navbarDropdown) {
         navbars.style.backgroundColor = "";
         navbars.style.boxShadow = "";
+        tieudebox1.style.width = "100%";
     }
 });
 

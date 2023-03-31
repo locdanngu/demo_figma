@@ -94,10 +94,129 @@
                 <p class="soluong">Quantity</p>
 
                 <p class="giasp">$649.99</p>
-                <button class="addtocart"><span class="add">Add to cart</span><i class="bi bi-chevron-right fix"></i></button>
+                <button class="addtocart"><span class="add">Add to cart</span><i
+                        class="bi bi-chevron-right fix"></i></button>
             </div>
         </div>
     </div>
+
+    <div class="box4">
+        <div class="bo4">
+            <div class="headbox4">
+                <p class="mota active">Description</p>
+                <p class="mota">Reviews(2)</p>
+            </div>
+            <hr class="duongke">
+            <div class="noidung active">
+                <p class="noidung2">One touch of a red-hot stove is usually all we need to avoid that kind of discomfort
+                    in
+                    the future. The same
+                    is true as we experience in emotional sensation of stress from our first instances of social
+                    rejection
+                    ridicule. We quickly learn to fear and thus automatically avoid potentially stressful situations of
+                    all
+                    kinds, including the most common of all making mistakes.</p>
+            </div>
+            <div class="noidung">
+                <p class="noidung2">There are no reviews yet.</p>
+                <p class="noidung2">Be the first to review “Galaxy Galaxy S8” Your email address will not be published.
+                </p>
+                <p class="noidung2">Your email address will not be published. Required fields are marked *</p>
+                <div class="rating">
+                    <p class="noidung3">Your Rating</p>
+                    <div class="star-rating">
+                        <input type="radio" id="5-stars" name="rating" value="5" />
+                        <label for="5-stars" class="star">&#9733;</label>
+                        <input type="radio" id="4-stars" name="rating" value="4" />
+                        <label for="4-stars" class="star">&#9733;</label>
+                        <input type="radio" id="3-stars" name="rating" value="3" />
+                        <label for="3-stars" class="star">&#9733;</label>
+                        <input type="radio" id="2-stars" name="rating" value="2" />
+                        <label for="2-stars" class="star">&#9733;</label>
+                        <input type="radio" id="1-star" name="rating" value="1" />
+                        <label for="1-star" class="star">&#9733;</label>
+                    </div>
+                </div>
+                <form method="POST" action="#" class="formbl">
+                    <textarea class="nhapbl" placeholder="Your Review *"></textarea>
+                    <div class="footbl">
+                        <input type="text" class="namebl" placeholder="Name *">
+                        <input type="email" class="namebl" placeholder="Email *">
+                        <input type="submit" class="btnbl" value="Submit">
+                    </div>
+                </form>
+                <div class="binhluan">
+                    <div class="headbinhluan">
+                        <div class="nguoibl">
+                            <img src="image/ava.png" class="imgbl">
+                            <p class="namenguoibl">Critical Skeptic</p>
+                        </div>
+                        <img src="image/sao.png" class="sao">
+                    </div>
+                    <p class="noidungbinhluan">Excellent phone, beautiful aesthetics, and a taste of the future worth
+                        paying for: 9/10.</p>
+                </div>
+                <div class="binhluan">
+                    <div class="headbinhluan">
+                        <div class="nguoibl">
+                            <img src="image/ava.png" class="imgbl">
+                            <p class="namenguoibl">Fleon</p>
+                        </div>
+                        <img src="image/sao.png" class="sao">
+                    </div>
+                    <p class="noidungbinhluan">It means it's the G950F variant which has a Exynos Chipset instead of
+                        snapdragon. Same power but this version allows for rooting because it has an unlocked
+                        bootloader. </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="box4 box5">
+        <div class="headbox5">
+            <p class="tieudebox">Related Products</p>
+            <div class="righttieudebox">
+                <i class="bi bi-chevron-left inbox5"></i>
+                <i class="bi bi-chevron-right inbox5"></i>
+            </div>
+        </div>
+
+
+        <div class="allmathang">
+            <a href="#" class="mathangnho">
+                <div class="headimg">
+                    <img src="image/sp1.png" class="imgthunho">
+                </div>
+
+                <p class="namemathang">Samsung Galaxy S9</p>
+                <p class="giamathang">$139.00</p>
+            </a>
+            <a href="#" class="mathangnho">
+                <div class="headimg">
+                    <img src="image/sp2.png" class="imgthunho">
+                </div>
+                <p class="namemathang">Samsung Galaxy S9 Plus</p>
+                <p class="giamathang">$139.00</p>
+            </a>
+            <a href="#" class="mathangnho">
+                <div class="headimg">
+                    <img src="image/sp3.png" class="imgthunho">
+                </div>
+                <p class="namemathang">iPhone XS Max</p>
+                <p class="giamathang">$139.00</p>
+            </a>
+            <a href="#" class="mathangnho">
+                <div class="headimg">
+                    <img src="image/sp4.png" class="imgthunho">
+                </div>
+                <p class="namemathang">Xiaomi Mi 8 SE</p>
+                <p class="giamathang">$139.00</p>
+            </a>
+
+        </div>
+    </div>
+
+
 
 
 
@@ -107,6 +226,26 @@
 
     <script>
     <?php include('script.js'); ?>
+
+
+    const mota = document.querySelectorAll('.mota');
+    const noidung = document.querySelectorAll('.noidung');
+    //Lưu ý: nội dung và mô tả phải bằng số lượng của nhau
+
+    mota.forEach(function(choice, index) {
+        choice.addEventListener('click', function() {
+            // Loại bỏ class active khỏi tất cả các phần tử của class mota và noidung
+            mota.forEach(function(choice) {
+                choice.classList.remove('active');
+            });
+            noidung.forEach(function(nd) {
+                nd.classList.remove('active');
+            });
+            // Thêm class active vào phần tử tương ứng của class mota và noidung
+            choice.classList.add('active');
+            noidung[index].classList.add('active');
+        });
+    });
     </script>
 
 
