@@ -1,5 +1,5 @@
 <?php include('xulitacvu.php'); ?>
-
+<?php include('controller/phone.php'); ?>
 <!DOCTYPE html>
 <html>
 
@@ -41,144 +41,22 @@
     <div class="box box1">
         <p class="headbox1">ECOMMERCE SITE</p>
     </div>
-
+    
     <div class="box box2">
         <div class="leftbox2">
-            <a href="productsdetailspage.php" class="osp">
+            <?php foreach ($allphone as $row) : ?>
+            <a href="productsdetailspage.php?idphone=<?php echo urlencode($row['idphone']); ?>&img=<?php echo urlencode($row['img']); ?>&name=<?php echo urlencode($row['name']); ?>&price=<?php echo urlencode($row['price']); ?>&gt1=<?php echo urlencode($row['gt1']); ?>&gt2=<?php echo urlencode($row['gt2']); ?>"
+                class="osp">
                 <div class="headsp">
-                    <img src="image/sp1.png" class="imgsp">
+                    <img src="<?php echo $row['img']; ?>" class="imgsp">
                 </div>
                 <div class="bodysp">
-                    <p class="namesp">Samsung Galaxy S8</p>
-                    <p class="giasp">$139.00</p>
+                    <p class="namesp"><?php echo $row['name']; ?></p>
+                    <p class="giasp">$<?php echo $row['price']; ?></p>
                 </div>
             </a>
-            <a href="#" class="osp">
-                <div class="headsp">
-                    <img src="image/sp2.png" class="imgsp">
-                </div>
-                <div class="bodysp">
-                    <p class="namesp">Samsung Galaxy S8 Plus</p>
-                    <p class="giasp">$139.00</p>
-                </div>
-            </a>
-            <a href="#" class="osp">
-                <div class="headsp">
-                    <img src="image/sp3.png" class="imgsp">
-                </div>
-                <div class="bodysp">
-                    <p class="namesp">Samsung Galaxy Note 8</p>
-                    <p class="giasp">$139.00</p>
-                </div>
-            </a>
-            <a href="#" class="osp">
-                <div class="headsp">
-                    <img src="image/sp4.png" class="imgsp">
-                </div>
-                <div class="bodysp">
-                    <p class="namesp">Samsung Galaxy S9</p>
-                    <p class="giasp">$139.00</p>
-                </div>
-            </a>
-            <a href="#" class="osp">
-                <div class="headsp">
-                    <img src="image/sp5.png" class="imgsp">
-                </div>
-                <div class="bodysp">
-                    <p class="namesp">Samsung Galaxy S9 Plus</p>
-                    <p class="giasp">$139.00</p>
-                </div>
-            </a>
-            <a href="#" class="osp">
-                <div class="headsp">
-                    <img src="image/sp6.png" class="imgsp">
-                </div>
-                <div class="bodysp">
-                    <p class="namesp">iPhone XS Max</p>
-                    <p class="giasp">$139.00</p>
-                </div>
-            </a>
-            <a href="#" class="osp">
-                <div class="headsp">
-                    <img src="image/sp7.png" class="imgsp">
-                </div>
-                <div class="bodysp">
-                    <p class="namesp">iPhone XR</p>
-                    <p class="giasp">$139.00</p>
-                </div>
-            </a>
-            <a href="#" class="osp">
-                <div class="headsp">
-                    <img src="image/sp8.png" class="imgsp">
-                </div>
-                <div class="bodysp">
-                    <p class="namesp">iPhone X</p>
-                    <p class="giasp">$139.00</p>
-                </div>
-            </a>
-            <a href="#" class="osp">
-                <div class="headsp">
-                    <img src="image/sp9.png" class="imgsp">
-                </div>
-                <div class="bodysp">
-                    <p class="namesp">iPhone XS</p>
-                    <p class="giasp">$139.00</p>
-                </div>
-            </a>
-            <a href="#" class="osp">
-                <div class="headsp">
-                    <img src="image/sp10.png" class="imgsp">
-                </div>
-                <div class="bodysp">
-                    <p class="namesp">iPhone 7 Plus</p>
-                    <p class="giasp">$139.00</p>
-                </div>
-            </a>
-            <a href="#" class="osp">
-                <div class="headsp">
-                    <img src="image/sp11.png" class="imgsp">
-                </div>
-                <div class="bodysp">
-                    <p class="namesp">Xiaomi Mi 8 SE</p>
-                    <p class="giasp">$139.00</p>
-                </div>
-            </a>
-            <a href="#" class="osp">
-                <div class="headsp">
-                    <img src="image/sp12.png" class="imgsp">
-                </div>
-                <div class="bodysp">
-                    <p class="namesp">Xiaomi Redmi 7</p>
-                    <p class="giasp">$139.00</p>
-                </div>
-            </a>
-            <a href="#" class="osp">
-                <div class="headsp">
-                    <img src="image/sp13.png" class="imgsp">
-                </div>
-                <div class="bodysp">
-                    <p class="namesp">Xiaomi Mi 8</p>
-                    <p class="giasp">$139.00</p>
-                </div>
-            </a>
-            <a href="#" class="osp">
-                <div class="headsp">
-                    <img src="image/sp14.png" class="imgsp">
-                </div>
-                <div class="bodysp">
-                    <p class="namesp">Nokia 7 Plus</p>
-                    <p class="giasp">$139.00</p>
-                </div>
-            </a>
-            <a href="#" class="osp">
-                <div class="headsp">
-                    <img src="image/sp15.png" class="imgsp">
-                </div>
-                <div class="bodysp">
-                    <p class="namesp">Lenovo S5 Pro</p>
-                    <p class="giasp">$139.00</p>
-                </div>
-            </a>
+            <?php endforeach; ?>
+
         </div>
 
         <div class="rightbox2">

@@ -11,7 +11,8 @@
         </div>
 
         <hr class="duongthang">
-        <form class="bodypopup" method="POST" action="verifyemailpage.php" onsubmit="return checkthongtindangky()">
+        <!-- <form class="bodypopup" method="POST" action="verifyemailpage.php" onsubmit="return checkthongtindangky()"> -->
+        <form class="bodypopup" method="POST" action="controller/signup.php" onsubmit="return checkthongtindangky()">
             <input type="email" id="emaildangky" name="emaildangky" placeholder="Email" class="oinput" required
                 pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" title="Vui lòng nhập đúng định dạng email">
             <!-- Câu lệnh trên kiểm tra tính hợp lệ của email nhập vào  -->

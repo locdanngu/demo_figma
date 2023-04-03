@@ -1,5 +1,13 @@
 <?php include('xulitacvu.php'); ?>
-
+<?php include('controller/reviewphone.php'); ?>
+<?php include('controller/phone.php'); ?>
+<?php 
+$img = isset($_GET['img']) ? urldecode($_GET['img']) : '';
+$name = isset($_GET['name']) ? urldecode($_GET['name']) : '';
+$price = isset($_GET['price']) ? urldecode($_GET['price']) : '';
+$gt1 = isset($_GET['gt1']) ? urldecode($_GET['gt1']) : '';
+$gt2 = isset($_GET['gt2']) ? urldecode($_GET['gt2']) : '';
+?>
 <!DOCTYPE html>
 <html>
 
@@ -46,7 +54,7 @@
         <div class="leftbox2">
             <a href="ecommercesitepage.php" class="linkhome">Home</a>
             <i class="bi bi-chevron-right"></i>
-            <p class="tensp">Galaxy S8</p>
+            <p class="tensp"><?php echo $name; ?></p>
         </div>
         <div class="rightbox2">
             <p class="needhelp">Need Help Ordering?</p>
@@ -58,24 +66,20 @@
     </div>
 
     <div class="box2 box3">
-        <img src="image/bigss.png" class="imgsp">
+        <img src="<?php echo $img; ?>" class="imgsp">
         <div class="rightbox3">
             <div class="headrightbox3">
-                <p class="namesp">Galaxy Galaxy S8</p>
+                <p class="namesp"><?php echo $name; ?></p>
                 <div class="rate">
                     <img src="image/rate.png" class="imgrate">
                     <span class="numrate">6376</span>
                 </div>
-                <p class="chitietsp">The Galaxy S8 expansive display stretches from edge to edge, giving you the most
-                    amount
-                    of screen in the least amount of space. And the Galaxy S8+ is even more expansive — our biggest
-                    screen
-                    yet.¹</p>
+                <p class="chitietsp"><?php echo $gt1; ?></p>
             </div>
             <div class="footrightbox3">
                 <p class="soluong">Quantity</p>
 
-                <p class="giasp">$649.99</p>
+                <p class="giasp">$<?php echo $price; ?></p>
                 <button class="addtocart"><span class="add">Add to cart</span><i
                         class="bi bi-chevron-right fix"></i></button>
             </div>
@@ -86,23 +90,22 @@
         <div class="bo4">
             <div class="headbox4">
                 <p class="mota active">Description</p>
-                <p class="mota">Reviews(2)</p>
+                <p class="mota">Reviews(<?php echo $countreview; ?>)</p>
             </div>
             <hr class="duongke">
             <div class="noidung active">
-                <p class="noidung2">One touch of a red-hot stove is usually all we need to avoid that kind of discomfort
-                    in
-                    the future. The same
-                    is true as we experience in emotional sensation of stress from our first instances of social
-                    rejection
-                    ridicule. We quickly learn to fear and thus automatically avoid potentially stressful situations of
-                    all
-                    kinds, including the most common of all making mistakes.</p>
+                <p class="noidung2"><?php echo $gt2; ?></p>
             </div>
             <div class="noidung">
+                <?php
+                if(intval($countreview)<1){
+                ?>
                 <p class="noidung2">There are no reviews yet.</p>
                 <p class="noidung2">Be the first to review “Galaxy Galaxy S8” Your email address will not be published.
                 </p>
+                <?php
+                }
+                ?>
                 <p class="noidung2">Your email address will not be published. Required fields are marked *</p>
                 <div class="rating">
                     <p class="noidung3">Your Rating</p>
@@ -127,29 +130,20 @@
                         <input type="submit" class="btnbl" value="Submit">
                     </div>
                 </form>
+
+                <?php foreach ($allreview as $row) : ?>
                 <div class="binhluan">
                     <div class="headbinhluan">
                         <div class="nguoibl">
-                            <img src="image/ava.png" class="imgbl">
-                            <p class="namenguoibl">Critical Skeptic</p>
+                            <img src="<?php echo $row['avatar']; ?>" class="imgbl">
+                            <p class="namenguoibl"><?php echo $row['nameuser']; ?></p>
                         </div>
                         <img src="image/sao.png" class="sao">
                     </div>
-                    <p class="noidungbinhluan">Excellent phone, beautiful aesthetics, and a taste of the future worth
-                        paying for: 9/10.</p>
+                    <p class="noidungbinhluan"><?php echo $row['review']; ?></p>
                 </div>
-                <div class="binhluan">
-                    <div class="headbinhluan">
-                        <div class="nguoibl">
-                            <img src="image/ava.png" class="imgbl">
-                            <p class="namenguoibl">Fleon</p>
-                        </div>
-                        <img src="image/sao.png" class="sao">
-                    </div>
-                    <p class="noidungbinhluan">It means it's the G950F variant which has a Exynos Chipset instead of
-                        snapdragon. Same power but this version allows for rooting because it has an unlocked
-                        bootloader. </p>
-                </div>
+                <?php endforeach; ?>
+
             </div>
         </div>
     </div>
@@ -165,35 +159,17 @@
 
 
         <div class="allmathang">
-            <a href="#" class="mathangnho">
+            <?php foreach ($allphone as $row) : ?>
+            <a href="productsdetailspage.php?idphone=<?php echo urlencode($row['idphone']); ?>&img=<?php echo urlencode($row['img']); ?>&name=<?php echo urlencode($row['name']); ?>&price=<?php echo urlencode($row['price']); ?>&gt1=<?php echo urlencode($row['gt1']); ?>&gt2=<?php echo urlencode($row['gt2']); ?>"
+                class="mathangnho">
                 <div class="headimg">
-                    <img src="image/sp1.png" class="imgthunho">
+                    <img src="<?php echo $row['img']; ?>" class="imgthunho">
                 </div>
 
-                <p class="namemathang">Samsung Galaxy S9</p>
-                <p class="giamathang">$139.00</p>
+                <p class="namemathang"><?php echo $row['name']; ?></p>
+                <p class="giamathang">$<?php echo $row['price']; ?></p>
             </a>
-            <a href="#" class="mathangnho">
-                <div class="headimg">
-                    <img src="image/sp2.png" class="imgthunho">
-                </div>
-                <p class="namemathang">Samsung Galaxy S9 Plus</p>
-                <p class="giamathang">$139.00</p>
-            </a>
-            <a href="#" class="mathangnho">
-                <div class="headimg">
-                    <img src="image/sp3.png" class="imgthunho">
-                </div>
-                <p class="namemathang">iPhone XS Max</p>
-                <p class="giamathang">$139.00</p>
-            </a>
-            <a href="#" class="mathangnho">
-                <div class="headimg">
-                    <img src="image/sp4.png" class="imgthunho">
-                </div>
-                <p class="namemathang">Xiaomi Mi 8 SE</p>
-                <p class="giamathang">$139.00</p>
-            </a>
+            <?php endforeach; ?>
 
         </div>
     </div>
