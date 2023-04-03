@@ -50,6 +50,19 @@ body {
     color: #0744F2 !important;
 }
 
+
+.linkanother{
+    background: transparent;
+    color: #0038D9;
+    border: 0px;
+    cursor: pointer;
+}
+
+.linkanother:hover{
+    color: red;
+    text-decoration: underline;
+}
+
 .nav-link {
     font-family: 'Circular Std';
     font-style: normal;
@@ -244,6 +257,7 @@ hr {
 }
 
 
+
 .footbox2 {
     background: #0744F2;
     border-radius: 3px;
@@ -252,14 +266,20 @@ hr {
     font-weight: 700;
     font-size: 18px;
     border: 0;
-    width: 11%;
     cursor: pointer;
-    height: 60%;
+    width: 11%;
+    height: 60px;
     color: #FFFFFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
 }
 
 .footbox2:hover {
-    opacity: 0.8;
+    color: #0744F2;
+    background: #FBFEFF;
+    text-decoration: none;
 }
 
 input[type=checkbox] {

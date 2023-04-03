@@ -48,10 +48,10 @@
             <div class="khoihead1">
                 <p class="headbox2">Verify your email address</p>
             </div>
-            <form class="khoihead2" action="https://mail.google.com/mail/">
+            <form class="khoihead2">
                 <p class="bodybox2">Before proceeding, please check your email for a verification link. If you did not
-                    receive the email, <a href="#" class="linkanother">click here to request another.</a></p>
-                <button class="footbox2">OK</button>
+                    receive the email, <input type="submit" class="linkanother" value="click here to request another."></input></p>
+                <a href="https://mail.google.com/mail/" class="footbox2">OK</a>
             </form>
 
         </div>

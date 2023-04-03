@@ -51,18 +51,21 @@
                     professional test automation architecture team.</p>
                 <p class="bodybox1">Start your learning journey NOW!!!</p>
                 <div class="linkbox1">
-                    <a class="link" href="#"><i class="bi bi-arrow-right"></i> Sign up to get our FREE SELENIUM TEST
+                    <a class="link" href="#"><i class="bi bi-arrow-right" style="<?php echo $arrow; ?>"></i> Sign up to
+                        get our FREE SELENIUM TEST
                         AUTOMATION
                         Code.</a>
-                    <a class="link" href="#"><i class="bi bi-arrow-right"></i> Sign up to join in Q&A forum with our
+                    <a class="link" href="#"><i class="bi bi-arrow-right" style="<?php echo $arrow; ?>"></i> Sign up to
+                        join in Q&A forum with our
                         TEST
                         AUTOMATION ARCHITECT team.</a>
-                    <a class="link" href="#"><i class="bi bi-arrow-right"></i> Sign up to receive Selenium Tips &
+                    <a class="link" href="#"><i class="bi bi-arrow-right" style="<?php echo $arrow; ?>"></i> Sign up to
+                        receive Selenium Tips &
                         ebooks.</a>
                 </div>
                 <form class="formbox1" action="#" method="POST">
-                    <input class="inputbox1" placeholder="Enter your email">
-                    <button class="btnbox1">Sign up</button>
+                    <input class="inputbox1" placeholder="Enter your email" style="<?php echo $input; ?>">
+                    <button class="btnbox1" style="<?php echo $btn; ?>">Sign up</button>
                 </form>
             </div>
             <img class="rightbox1" src="image/thuyettrinh.png">

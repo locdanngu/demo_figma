@@ -50,11 +50,14 @@
         <p class="tieudeform">To login, provide your sign up email and password.
             If you are not sign up yet, please <a href="#" onclick="popupsignup()" class="clickhere">click here to
                 signup ></a></p>
-        <form method="POST" class="formbox2" action="automationactionssitepage.php">
+        <form method="POST" class="formbox2" action="controller/logintoaction.php">
             <p class="txtbox2">Email: <span style="color: #D2000D">*</span></p>
-            <input type="text" class="inputbox2" placeholder="Email" required>
+            <input type="text" class="inputbox2" placeholder="Email" required name="emaildangnhap"
+                pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" title="Vui lòng nhập đúng định dạng email">
             <p class="txtbox2">Password: <span style="color: #D2000D">*</span></p>
-            <input type="password" class="inputbox2" placeholder="Enter" required>
+            <input type="password" class="inputbox2" placeholder="Enter" required name="passworddangnhap"
+                pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,16}$"
+                title="Vui lòng nhập mật khẩu có độ dài từ 8 đến 16 ký tự, bao gồm ít nhất một chữ thường, một chữ hoa và một chữ số">
             <input type="submit" value="Login" class="btnbox2">
         </form>
     </div>
