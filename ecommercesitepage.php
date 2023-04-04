@@ -64,7 +64,9 @@
                 $active2 = 'active';
             } 
             ?>
-            <input type="text" placeholder="Search" class="inputbox2">
+            <form method="GET" action="ecommercesitepage.php">
+                <input type="text" placeholder="Search" class="inputbox2" name="findphone">
+            </form>
             <p class="tieude">Categories</p>
             <a href="ecommercesitepage.php" class="hang">
                 <p class="name <?php echo $active2; ?>">All</p>

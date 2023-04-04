@@ -4,18 +4,18 @@
 try {
   $conn = new PDO("mysql:host=$host;dbname=$dbname", $user, $pass);
   $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-  if(!isset($_GET['hang'])){                      //nếu chưa lọc theo hãng sẽ lấy all
+  if(!isset($_GET['hang']) && !isset($_GET['findphone'])){                      //nếu chưa lọc theo hãng sẽ lấy all
     $stmt = $conn->query('SELECT * FROM phone');
     // while ($row = $stmt->fetch()) {
     //   echo $row['id'] . ': ' . $row['name'] . '<br>';
     // }
     $stmt->execute();
-  
     $allphone = $stmt->fetchAll(PDO::FETCH_ASSOC);        
     //dùng để lấy ra tất cả các bản ghi trong kết quả trả về của câu truy vấn
     //, với kiểu dữ liệu trả về được chỉ định là PDO::FETCH_ASSOC để lấy các cặp giá trị (key-value)
     // tương ứng với tên cột và giá trị của bản ghi.
-  } else{                                           //lọc điện thoại theo hãng
+  }
+  if(isset($_GET['hang']) && !isset($_GET['findphone'])){                //khi chọn hãng và ko nhập vào ô input
     $hang = $_GET['hang'];
     $stmt = $conn->prepare("SELECT * 
                           FROM phone
@@ -23,7 +23,16 @@ try {
                           WHERE namefirm = ?");
     $stmt->bindParam(1, $hang);            //gán giá trị hang vào ?                      
     $stmt->execute();
-  
+    $allphone = $stmt->fetchAll(PDO::FETCH_ASSOC); 
+  } 
+  if(!isset($_GET['hang']) && isset($_GET['findphone'])){                //khi nhập ô input mà chưa chọn hãng
+    $stmt = $conn->prepare("SELECT * 
+                          FROM phone
+                          INNER JOIN firm ON phone.idfirm = firm.idfirm
+                          WHERE name LIKE ?");
+    $findphone = "%" . $_GET['findphone'] . "%";                      
+    $stmt->bindParam(1, $findphone);            //gán giá trị findphone vào ?                      
+    $stmt->execute();
     $allphone = $stmt->fetchAll(PDO::FETCH_ASSOC); 
   }
   
@@ -71,6 +80,8 @@ try {
   echo "Connection failed: " . $e->getMessage();
 }
 ?>
+
+
 
 
 
