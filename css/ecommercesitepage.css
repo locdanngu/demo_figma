@@ -460,6 +460,11 @@ input[type=checkbox]:checked:after {
     text-decoration: underline;
 }
 
+.imgpopular{
+    width: 4.75em;
+    height: 4.75em;
+}
+
 .imgfb {
     position: fixed;
     right: 0;
@@ -620,6 +625,7 @@ align-content: baseline;
 
 .hang:hover {
     opacity: 0.5;
+    text-decoration: none;
 }
 
 .name, .sl {
@@ -776,3 +782,4 @@ margin: 0 !important;
 color: #000000;
 
 }
+

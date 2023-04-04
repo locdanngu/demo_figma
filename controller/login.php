@@ -2,35 +2,27 @@
 
 <?php
 session_start();
-// if ($_SERVER['REQUEST_METHOD'] === 'POST') {                //Kiểm tra xem có phải phương thức post không
-//     $_SESSION['username'] = $_POST['emaildangnhap'];
-//     $previousPage = $_SERVER['HTTP_REFERER'];               //Lưu địa chỉ trang web lúc đăng nhập
-//     header("Location: $previousPage");                      //Trả về trang mà mình làm đăng nhập
-//     // header('Location: ../homepage.php');
-//   } else {
-//     header('Location: ../homepage.php');
-//   }
 try {
   if ($_SERVER['REQUEST_METHOD'] === 'POST') {                //Kiểm tra xem có phải phương thức post không
-      $emaildangnhap = $_POST['emaildangnhap'];
+      $emaildangnhap = $_POST['emaildangnhap'];               //lấy dữ liệu post
       $passworddangnhap = $_POST['passworddangnhap'];
       $conn = new PDO("mysql:host=$host;dbname=$dbname", $user, $pass);
       $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
       $stmt = $conn->prepare("SELECT password FROM user WHERE email = ?");
-      $stmt->bindParam(1, $emaildangnhap);
-      $stmt->execute();
-      $row = $stmt->fetch(PDO::FETCH_ASSOC);
-      $hashedPassword = $row['password'];
-      if (password_verify($passworddangnhap, $hashedPassword)) {
-        $_SESSION['username'] = $_POST['emaildangnhap'];
-        $previousPage = $_SERVER['HTTP_REFERER']; 
+      $stmt->bindParam(1, $emaildangnhap);            //gán giá trị email vào ?
+      $stmt->execute();                               //chạy truy vấn
+      $row = $stmt->fetch(PDO::FETCH_ASSOC);          //lấy kết quả truy vấn
+      $hashedPassword = $row['password'];             //mã hóa mật khẩu
+      if (password_verify($passworddangnhap, $hashedPassword)) {              //kiểm tra mật khẩu trùng khớp
+        $_SESSION['username'] = $_POST['emaildangnhap'];                      //gán session
+        $previousPage = $_SERVER['HTTP_REFERER'];                             //lưu địa chỉ trang trước
         header("Location: $previousPage");  
       } else {
           // Mật khẩu không hợp lệ
           header('Location: ../homepage.php');
       }
     } else {
-      header('Location: ../homepage.php');
+      header('Location: ../homepage.php');              
     } 
 } catch(PDOException $e) {
   echo "Connection failed: " . $e->getMessage();

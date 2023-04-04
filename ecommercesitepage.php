@@ -41,7 +41,7 @@
     <div class="box box1">
         <p class="headbox1">ECOMMERCE SITE</p>
     </div>
-    
+
     <div class="box box2">
         <div class="leftbox2">
             <?php foreach ($allphone as $row) : ?>
@@ -58,30 +58,34 @@
             <?php endforeach; ?>
 
         </div>
-
         <div class="rightbox2">
+            <?php 
+            if (!isset($hang)) {
+                $active2 = 'active';
+            } 
+            ?>
             <input type="text" placeholder="Search" class="inputbox2">
             <p class="tieude">Categories</p>
-            <div class="hang">
-                <p class="name active">All</p>
-                <p class="sl active">(15)</p>
-            </div>
-            <div class="hang">
-                <p class="name">Apple</p>
-                <p class="sl">(05)</p>
-            </div>
-            <div class="hang">
-                <p class="name">Samsung</p>
-                <p class="sl">(05)</p>
-            </div>
-            <div class="hang">
-                <p class="name">Xiaomi</p>
-                <p class="sl">(03)</p>
-            </div>
-            <div class="hang">
+            <a href="ecommercesitepage.php" class="hang">
+                <p class="name <?php echo $active2; ?>">All</p>
+                <p class="sl <?php echo $active2; ?>">(<?php echo $countphone; ?>)</p>
+            </a>
+            <?php foreach ($listphone as $row) : ?>
+            <?php 
+            if(isset($hang)){
+                // nếu biến hang tồn tại thì thêm thuộc tính active vào style
+                $active = ($row['namefirm'] == $hang) ? 'active' : ''; 
+            }
+            ?>
+            <a href="ecommercesitepage.php?hang=<?php echo $row['namefirm']; ?>" class="hang">
+                <p class="name <?php echo $active; ?>"><?php echo $row['namefirm']; ?></p>
+                <p class="sl <?php echo $active; ?>">(<?php echo $row['total']; ?>)</p>
+            </a>
+            <?php endforeach; ?>
+            <!-- <div class="hang">
                 <p class="name">Other</p>
-                <p class="sl">(02)</p>
-            </div>
+                <p class="sl">(2)</p>
+            </div> -->
             <p class="tieude">Filter by Price</p>
             <div id="slider">
                 <input type="range" min="0" max="2000" value="1000" class="slider">
@@ -89,27 +93,16 @@
             </div>
 
             <p class="tieude">Popular Products</p>
-            <a href="#" class="mon">
-                <img class="imgpopular" src="image/smallip.png">
+            <?php foreach ($popularphone as $row) : ?>
+            <a href="productsdetailspage.php?idphone=<?php echo urlencode($row['idphone']); ?>&img=<?php echo urlencode($row['img']); ?>&name=<?php echo urlencode($row['name']); ?>&price=<?php echo urlencode($row['price']); ?>&gt1=<?php echo urlencode($row['gt1']); ?>&gt2=<?php echo urlencode($row['gt2']); ?>"
+                class="mon">
+                <img class="imgpopular" src="<?php echo $row['img']; ?>">
                 <div class="in4img">
-                    <p class="nameimg">iPhone XS Max</p>
-                    <p class="price">$139</p>
+                    <p class="nameimg"><?php echo $row['name']; ?></p>
+                    <p class="price"><?php echo $row['price']; ?></p>
                 </div>
             </a>
-            <a href="#" class="mon">
-                <img class="imgpopular" src="image/smallss.png">
-                <div class="in4img">
-                    <p class="nameimg">Samsung Galaxy S9 Plus</p>
-                    <p class="price">$139</p>
-                </div>
-            </a>
-            <a href="#" class="mon">
-                <img class="imgpopular" src="image/smallxm.png">
-                <div class="in4img">
-                    <p class="nameimg">Xiaomi Mi 8 SE</p>
-                    <p class="price">$139</p>
-                </div>
-            </a>
+            <?php endforeach; ?>
 
         </div>
     </div>
@@ -123,10 +116,6 @@
 
     <script>
     <?php include('templates/script.js'); ?>
-
-
-
-
 
     const slider = document.querySelector('.slider');
     const price = document.querySelector('#price');
