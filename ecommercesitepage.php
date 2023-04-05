@@ -171,12 +171,12 @@
                 // price.innerHTML = this.responseText;
             }
         };
-        if (<?php echo isset($hang) ?>) {
+        if (<?php echo isset($hang) ? 'true' : 'false'; ?>) {
             var url = "controller/priceandhang.php?value=" + value + "&hang=<?php echo $hang; ?>";
             xhttp.open("GET", url, true);
             xhttp.send();
         } else {
-            xhttp.open("GET", "controller/price.php?value=" + value, true);
+            xhttp.open("GET", "controller/all.php?value=" + value, true);
             xhttp.send();
         }
     });
