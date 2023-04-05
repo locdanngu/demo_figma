@@ -3,8 +3,8 @@
 <!-- lấy review phone trong csdl -->
 <?php
 try {
-  $conn = new PDO("mysql:host=$host;dbname=$dbname", $user, $pass);
-  $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+  // $conn = new PDO("mysql:host=$host;dbname=$dbname", $user, $pass);
+  // $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
   $idphone = isset($_GET['idphone']) ? $_GET['idphone'] : '';
   $a= intval($idphone);
   $stmt = $conn->prepare("SELECT DISTINCT user.*,review.review,star
