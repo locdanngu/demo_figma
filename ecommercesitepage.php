@@ -109,6 +109,14 @@
         </div>
     </div>
 
+    <?php 
+    if(isset($hang)){
+        echo 'a';
+    }else{
+        echo $hang;
+    }
+    ?>
+
 
 
 
@@ -163,8 +171,14 @@
                 // price.innerHTML = this.responseText;
             }
         };
-        xhttp.open("GET", "controller/price.php?value=" + value, true);
-        xhttp.send();
+        if (<?php echo isset($hang) ?>) {
+            var url = "controller/priceandhang.php?value=" + value + "&hang=<?php echo $hang; ?>";
+            xhttp.open("GET", url, true);
+            xhttp.send();
+        } else {
+            xhttp.open("GET", "controller/price.php?value=" + value, true);
+            xhttp.send();
+        }
     });
     </script>
 
