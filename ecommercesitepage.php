@@ -163,7 +163,7 @@
                 // price.innerHTML = this.responseText;
             }
         };
-        xhttp.open("GET", "controller/phone.php?value=" + value, true);
+        xhttp.open("GET", "controller/price.php?value=" + value, true);
         xhttp.send();
     });
     </script>
