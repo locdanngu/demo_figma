@@ -43,7 +43,7 @@
     </div>
 
     <div class="box box2">
-        <div class="leftbox2">
+        <div class="leftbox2" id="listphone">
             <?php foreach ($allphone as $row) : ?>
             <a href="productsdetailspage.php?idphone=<?php echo urlencode($row['idphone']); ?>&img=<?php echo urlencode($row['img']); ?>&name=<?php echo urlencode($row['name']); ?>&price=<?php echo urlencode($row['price']); ?>&gt1=<?php echo urlencode($row['gt1']); ?>&gt2=<?php echo urlencode($row['gt2']); ?>"
                 class="osp">
@@ -90,7 +90,7 @@
             </div> -->
             <p class="tieude">Filter by Price</p>
             <div id="slider">
-                <input type="range" min="0" max="2000" value="1000" class="slider">
+                <input type="range" min="0" max="2000" value="1000" class="slider" id="range">
                 <p>Price: <span class="bol">$0 - $</span><span id="price" class="bol"></span></p>
             </div>
 
@@ -128,6 +128,44 @@
 
     slider.value = 1000;
     price.textContent = 1000; //đặt giá trị ban đầu
+
+
+    // function findphone() {
+    //     // Tạo một yêu cầu AJAX đến b.php với tham số là giá trị của ô input
+    //     var xhttp = new XMLHttpRequest();                                           //tạo kết nối xhttp
+    //     xhttp.onreadystatechange = function() {
+    //         if (this.readyState == 4 && this.status == 200) {                           //điều kiện hoàn thành
+    //             // Xử lý phản hồi từ b.php ở đây
+    //             document.getElementById("listphone").innerHTML = this.responseText;        //gán kết quả trả về
+    //         }
+    //     };
+    //     var input = document.getElementById("findphone").value;     //lấy giá trị mình nhập vào ô input
+    //     xhttp.open("GET", "controller/phone.php?findphone=" + input, true);        //gửi yêu cầu get
+    //     xhttp.send();
+    // }
+
+
+    // Lấy thẻ input range và thẻ span hiển thị giá trị
+    var range = document.getElementById("range");
+    // var price = document.getElementById("price");
+
+    // Thêm sự kiện input cho thẻ input range
+    range.addEventListener("input", function() {
+        // Lấy giá trị của thẻ input range
+        var value = range.value;
+
+        // Gửi yêu cầu AJAX đến server với tham số giá trị của thẻ input range
+        var xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                // Xử lý phản hồi từ server ở đây và cập nhật giá trị hiển thị
+                document.getElementById("listphone").innerHTML = this.responseText;
+                // price.innerHTML = this.responseText;
+            }
+        };
+        xhttp.open("GET", "controller/phone.php?value=" + value, true);
+        xhttp.send();
+    });
     </script>
 
 
