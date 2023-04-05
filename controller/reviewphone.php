@@ -7,7 +7,7 @@ try {
   $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
   $idphone = isset($_GET['idphone']) ? $_GET['idphone'] : '';
   $a= intval($idphone);
-  $stmt = $conn->prepare("SELECT DISTINCT user.*,review.review
+  $stmt = $conn->prepare("SELECT DISTINCT user.*,review.review,star
                         FROM user 
                         INNER JOIN review ON user.iduser = review.iduser 
                         INNER JOIN phone ON review.idphone = phone.idphone

@@ -2,11 +2,13 @@
 <?php include('controller/reviewphone.php'); ?>
 <?php include('controller/phone.php'); ?>
 <?php 
+$idphone = isset($_GET['idphone']) ? urldecode($_GET['idphone']) : '';
 $img = isset($_GET['img']) ? urldecode($_GET['img']) : '';
 $name = isset($_GET['name']) ? urldecode($_GET['name']) : '';
 $price = isset($_GET['price']) ? urldecode($_GET['price']) : '';
 $gt1 = isset($_GET['gt1']) ? urldecode($_GET['gt1']) : '';
 $gt2 = isset($_GET['gt2']) ? urldecode($_GET['gt2']) : '';
+//giải mã đường link
 ?>
 <!DOCTYPE html>
 <html>
@@ -107,6 +109,7 @@ $gt2 = isset($_GET['gt2']) ? urldecode($_GET['gt2']) : '';
                 }
                 ?>
                 <p class="noidung2">Your email address will not be published. Required fields are marked *</p>
+                <form method="GET" action="controller/addreview.php" class="formbl">
                 <div class="rating">
                     <p class="noidung3">Your Rating</p>
                     <div class="star-rating">
@@ -122,11 +125,17 @@ $gt2 = isset($_GET['gt2']) ? urldecode($_GET['gt2']) : '';
                         <label for="1-star" class="star">&#9733;</label>
                     </div>
                 </div>
-                <form method="POST" action="#" class="formbl">
-                    <textarea class="nhapbl" placeholder="Your Review *"></textarea>
+                    <textarea class="nhapbl" placeholder="Your Review *" name="review"></textarea>
+                    <input type="text" style="display: none;" name="idphone" value="<?php echo $idphone; ?>">
                     <div class="footbl">
+                        <?php
+                        if(!isset($_SESSION['username'])){
+                        ?>
                         <input type="text" class="namebl" placeholder="Name *">
                         <input type="email" class="namebl" placeholder="Email *">
+                        <?php
+                        }
+                        ?>
                         <input type="submit" class="btnbl" value="Submit">
                     </div>
                 </form>
@@ -138,7 +147,20 @@ $gt2 = isset($_GET['gt2']) ? urldecode($_GET['gt2']) : '';
                             <img src="<?php echo $row['avatar']; ?>" class="imgbl">
                             <p class="namenguoibl"><?php echo $row['nameuser']; ?></p>
                         </div>
-                        <img src="image/sao.png" class="sao">
+                        <?php
+                        $star = intval($row['star']);
+                        if($row['star']==1){
+                            echo "<img src='image/1sao.png' class='sao'>";
+                        }else if($row['star']==2){
+                            echo "<img src='image/2sao.png' class='sao'>";
+                        }else if($row['star']==3){
+                            echo "<img src='image/3sao.png' class='sao'>";
+                        }else if($row['star']==4){
+                            echo "<img src='image/4sao.png' class='sao'>";
+                        }else{
+                            echo "<img src='image/5sao.png' class='sao'>";
+                        }
+                        ?>
                     </div>
                     <p class="noidungbinhluan"><?php echo $row['review']; ?></p>
                 </div>
