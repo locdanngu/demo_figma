@@ -109,12 +109,9 @@
         </div>
     </div>
 
-    <?php 
-    if(isset($hang)){
-        echo 'a';
-    }else{
-        echo $hang;
-    }
+    <?php
+    $findphone = isset($findphone) ? $findphone : ''; // Nếu biến $hang không tồn tại, gán cho nó giá trị rỗng
+    $hang = isset($hang) ? $hang : ''; // Nếu biến $hang không tồn tại, gán cho nó giá trị rỗng
     ?>
 
 
@@ -126,17 +123,6 @@
 
     <script>
     <?php include('templates/script.js'); ?>
-
-    const slider = document.querySelector('.slider');
-    const price = document.querySelector('#price');
-
-    slider.addEventListener('input', () => {
-        price.textContent = slider.value;
-    });
-
-    slider.value = 1000;
-    price.textContent = 1000; //đặt giá trị ban đầu
-
 
     // function findphone() {
     //     // Tạo một yêu cầu AJAX đến b.php với tham số là giá trị của ô input
@@ -152,6 +138,15 @@
     //     xhttp.send();
     // }
 
+    const slider = document.querySelector('.slider');
+    const price = document.getElementById('price');
+
+    slider.addEventListener('input', () => {
+        price.textContent = slider.value;
+    });
+
+    slider.value = 1000;
+    price.textContent = 1000; //đặt giá trị ban đầu
 
     // Lấy thẻ input range và thẻ span hiển thị giá trị
     var range = document.getElementById("range");
@@ -161,7 +156,6 @@
     range.addEventListener("input", function() {
         // Lấy giá trị của thẻ input range
         var value = range.value;
-
         // Gửi yêu cầu AJAX đến server với tham số giá trị của thẻ input range
         var xhttp = new XMLHttpRequest();
         xhttp.onreadystatechange = function() {
@@ -171,14 +165,17 @@
                 // price.innerHTML = this.responseText;
             }
         };
-        if (<?php echo isset($hang) ? 'true' : 'false'; ?>) {
-            var url = "controller/priceandhang.php?value=" + value + "&hang=<?php echo $hang; ?>";
-            xhttp.open("GET", url, true);
-            xhttp.send();
-        } else {
-            xhttp.open("GET", "controller/all.php?value=" + value, true);
-            xhttp.send();
+        var findphone = '<?php echo $findphone; ?>'; // Chuyển giá trị biến PHP thành biến Javascript
+        var hang = '<?php echo $hang; ?>'; // Chuyển giá trị biến PHP thành biến Javascript
+        // Thêm kiểm tra để tạo URL cho yêu cầu AJAX
+        var url = "controller/phoneajax.php?value=" + value;
+        if (hang !== '' && findphone == '') {
+            url += "&hang=" + hang;
+        }else if(hang == '' && findphone !== ''){
+            url += "&findphone=" + findphone;
         }
+        xhttp.open("GET", url, true);
+        xhttp.send();
     });
     </script>
 

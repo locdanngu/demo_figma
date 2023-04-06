@@ -2,7 +2,7 @@
 <!-- lấy dữ liệu tất cả phone -->
 <?php
 try {
-  if(!isset($_GET['hang']) && !isset($_GET['findphone'])){                      //nếu chưa lọc theo hãng sẽ lấy all
+  if(!isset($_GET['hang']) && !isset($_GET['findphone']) && !isset($_GET['value'])){     //nếu chưa lọc theo hãng sẽ lấy all
     $stmt = $conn->query('SELECT * FROM phone');
     // while ($row = $stmt->fetch()) {
     //   echo $row['id'] . ': ' . $row['name'] . '<br>';
@@ -13,7 +13,7 @@ try {
     //, với kiểu dữ liệu trả về được chỉ định là PDO::FETCH_ASSOC để lấy các cặp giá trị (key-value)
     // tương ứng với tên cột và giá trị của bản ghi.
   }
-  if(isset($_GET['hang']) && !isset($_GET['findphone'])){                //khi chọn hãng và ko nhập vào ô input
+  if(isset($_GET['hang']) && !isset($_GET['findphone']) && !isset($_GET['value'])){      //khi chọn hãng và ko nhập vào ô input
     $hang = $_GET['hang'];
     $stmt = $conn->prepare("SELECT * 
                           FROM phone
@@ -23,7 +23,7 @@ try {
     $stmt->execute();
     $allphone = $stmt->fetchAll(PDO::FETCH_ASSOC); 
   } 
-  if(!isset($_GET['hang']) && isset($_GET['findphone'])){                //khi nhập ô input mà chưa chọn hãng
+  if(!isset($_GET['hang']) && isset($_GET['findphone']) && !isset($_GET['value'])){      //khi nhập ô input mà chưa chọn hãng
     $stmt = $conn->prepare("SELECT * 
                           FROM phone
                           INNER JOIN firm ON phone.idfirm = firm.idfirm
@@ -33,6 +33,7 @@ try {
     $stmt->execute();
     $allphone = $stmt->fetchAll(PDO::FETCH_ASSOC); 
   }
+  
 } catch(PDOException $e) {
   echo "Connection failed: " . $e->getMessage();
 }
