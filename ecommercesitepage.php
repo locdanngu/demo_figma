@@ -155,11 +155,11 @@
         // Thêm kiểm tra để tạo URL cho yêu cầu AJAX
         var url = "controller/phoneajax.php?value=" + value;
         var input = document.getElementById("findphone").value;     //lấy giá trị mình nhập vào ô input
-        if (hang !== '') {
+        if (hang !== '' && input == '') {
             url += "&hang=" + hang;
         }else if(hang == '' && input !== ''){
             url += "&findphone=" + input;
-        }else{
+        }else if(hang !== '' && input !== ''){
             url += "&hang=" + hang + "&findphone=" + input;
         }
         xhttp.open("GET", url, true);
