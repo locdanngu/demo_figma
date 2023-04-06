@@ -64,9 +64,9 @@
                 $active2 = 'active';
             } 
             ?>
-            <form method="GET" action="ecommercesitepage.php">
-                <input type="text" placeholder="Search" class="inputbox2" name="findphone">
-            </form>
+            <!-- <form method="GET" action="ecommercesitepage.php"> -->
+                <input type="text" placeholder="Search" class="inputbox2" name="findphone" id="findphone" oninput="findphone()">
+            <!-- </form> -->
             <p class="tieude">Categories</p>
             <a href="ecommercesitepage.php" class="hang">
                 <p class="name <?php echo $active2; ?>">All</p>
@@ -124,20 +124,6 @@
     <script>
     <?php include('templates/script.js'); ?>
 
-    // function findphone() {
-    //     // Tạo một yêu cầu AJAX đến b.php với tham số là giá trị của ô input
-    //     var xhttp = new XMLHttpRequest();                                           //tạo kết nối xhttp
-    //     xhttp.onreadystatechange = function() {
-    //         if (this.readyState == 4 && this.status == 200) {                           //điều kiện hoàn thành
-    //             // Xử lý phản hồi từ b.php ở đây
-    //             document.getElementById("listphone").innerHTML = this.responseText;        //gán kết quả trả về
-    //         }
-    //     };
-    //     var input = document.getElementById("findphone").value;     //lấy giá trị mình nhập vào ô input
-    //     xhttp.open("GET", "controller/phone.php?findphone=" + input, true);        //gửi yêu cầu get
-    //     xhttp.send();
-    // }
-
     const slider = document.querySelector('.slider');
     const price = document.getElementById('price');
 
@@ -145,8 +131,8 @@
         price.textContent = slider.value;
     });
 
-    slider.value = 1000;
-    price.textContent = 1000; //đặt giá trị ban đầu
+    slider.value = 2000;
+    price.textContent = 2000; //đặt giá trị ban đầu
 
     // Lấy thẻ input range và thẻ span hiển thị giá trị
     var range = document.getElementById("range");
@@ -165,18 +151,42 @@
                 // price.innerHTML = this.responseText;
             }
         };
-        var findphone = '<?php echo $findphone; ?>'; // Chuyển giá trị biến PHP thành biến Javascript
         var hang = '<?php echo $hang; ?>'; // Chuyển giá trị biến PHP thành biến Javascript
         // Thêm kiểm tra để tạo URL cho yêu cầu AJAX
         var url = "controller/phoneajax.php?value=" + value;
-        if (hang !== '' && findphone == '') {
+        if (hang !== '') {
             url += "&hang=" + hang;
-        }else if(hang == '' && findphone !== ''){
-            url += "&findphone=" + findphone;
         }
+        // }else if(hang == '' && findphone !== ''){
+        //     url += "&findphone=" + findphone;
+        // }
+        
         xhttp.open("GET", url, true);
         xhttp.send();
     });
+
+
+    function findphone() {
+        // Tạo một yêu cầu AJAX đến b.php với tham số là giá trị của ô input
+        var xhttp = new XMLHttpRequest();                                           //tạo kết nối xhttp
+        xhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {                           //điều kiện hoàn thành
+                // Xử lý phản hồi từ b.php ở đây
+                document.getElementById("listphone").innerHTML = this.responseText;        //gán kết quả trả về
+            }
+        };
+        var value = range.value;
+        var hang = '<?php echo $hang; ?>'; // Chuyển giá trị biến PHP thành biến Javascript
+        var input = document.getElementById("findphone").value;     //lấy giá trị mình nhập vào ô input
+        var url = "controller/findajax.php?findphone=" + input;
+        if (hang !== '') {
+            url += "&hang=" + hang;
+        }else if(hang == '' && value !== ''){
+            url += "&value=" + value;
+        }
+        xhttp.open("GET", url, true);
+        xhttp.send();
+    }
     </script>
 
 

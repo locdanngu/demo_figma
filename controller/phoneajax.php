@@ -2,7 +2,7 @@
 
 <?php
 try {
-  if(isset($_GET['value']) && isset($_GET['hang']) && !isset($_GET['findphone'])){//xử lí ajax khi kéo tiền mà đã chọn hàng nhưng chưa nhập
+  if(isset($_GET['value']) && isset($_GET['hang'])){//xử lí ajax khi kéo tiền mà đã chọn hàng nhưng chưa nhập
     $hang = $_GET['hang'];
     $value = $_GET["value"];
     $stmt = $conn->prepare("SELECT * 
@@ -55,7 +55,7 @@ try {
     <?php
     endforeach;
   }
-  if(isset($_GET['value']) && !isset($_GET['hang']) && isset($_GET['findphone'])){//xử lí ajax khi kéo tiền mà chưa chọn hàng nhưng đã nhập
+  if(isset($_GET['value']) && !isset($_GET['hang']) && isset($_GET['findphone'])){ //xử lí ajax khi kéo tiền mà chưa chọn hàng hay nhập
     // $hang = $_GET['hang'];
     $value = $_GET["value"];
     $findphone = $_GET['findphone'];
@@ -63,9 +63,9 @@ try {
                           FROM phone
                           INNER JOIN firm ON phone.idfirm = firm.idfirm
                           WHERE price < ? AND name LIKE ?");
+    // $intprice = intval($price);
     $stmt->bindParam(1, $value);            //gán giá trị findphone vào ?      
-    // $stmt->bindParam(2, $hang);   
-    $stmt->bindParam(2, $findphone);                             
+    $stmt->bindParam(2, $findphone);                
     $stmt->execute();
     $allphone = $stmt->fetchAll(PDO::FETCH_ASSOC); 
     foreach ($allphone as $row) :
@@ -83,6 +83,8 @@ try {
     <?php
     endforeach;
   }
+  
+  
 } catch(PDOException $e) {
   echo "Connection failed: " . $e->getMessage();
 }

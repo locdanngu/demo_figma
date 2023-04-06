@@ -1,4 +1,4 @@
-<?php include('controller/dbconnect.php'); ?>
+<?php include('dbconnect.php'); ?>
 
 <?php
 try {

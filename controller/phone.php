@@ -23,17 +23,28 @@ try {
     $stmt->execute();
     $allphone = $stmt->fetchAll(PDO::FETCH_ASSOC); 
   } 
-  if(!isset($_GET['hang']) && isset($_GET['findphone']) && !isset($_GET['value'])){      //khi nhập ô input mà chưa chọn hãng
-    $stmt = $conn->prepare("SELECT * 
-                          FROM phone
-                          INNER JOIN firm ON phone.idfirm = firm.idfirm
-                          WHERE name LIKE ?");
-    $findphone = "%" . $_GET['findphone'] . "%";                      
-    $stmt->bindParam(1, $findphone);            //gán giá trị findphone vào ?                      
-    $stmt->execute();
-    $allphone = $stmt->fetchAll(PDO::FETCH_ASSOC); 
-  }
-  
+  // if(!isset($_GET['hang']) && isset($_GET['findphone']) && !isset($_GET['value'])){      //khi nhập ô input mà chưa chọn hãng
+  //   $stmt = $conn->prepare("SELECT * 
+  //                         FROM phone
+  //                         INNER JOIN firm ON phone.idfirm = firm.idfirm
+  //                         WHERE name LIKE ?");
+  //   $findphone = "%" . $_GET['findphone'] . "%";                      
+  //   $stmt->bindParam(1, $findphone);            //gán giá trị findphone vào ?                      
+  //   $stmt->execute();
+  //   $allphone = $stmt->fetchAll(PDO::FETCH_ASSOC); 
+  // }
+  // if(isset($_GET['hang']) && isset($_GET['findphone']) && !isset($_GET['value'])){      //khi nhập ô input mà đã chọn hãng
+  //   $hang = $_GET['hang'];
+  //   $stmt = $conn->prepare("SELECT * 
+  //                         FROM phone
+  //                         INNER JOIN firm ON phone.idfirm = firm.idfirm
+  //                         WHERE name LIKE ? AND namefirm = ?");
+  //   $findphone = "%" . $_GET['findphone'] . "%";                      
+  //   $stmt->bindParam(1, $findphone);            //gán giá trị findphone vào ?     
+  //   $stmt->bindParam(2, $hang);               
+  //   $stmt->execute();
+  //   $allphone = $stmt->fetchAll(PDO::FETCH_ASSOC); 
+  // }
 } catch(PDOException $e) {
   echo "Connection failed: " . $e->getMessage();
 }
