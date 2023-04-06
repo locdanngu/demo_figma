@@ -159,8 +159,9 @@
             url += "&hang=" + hang;
         }else if(hang == '' && input !== ''){
             url += "&findphone=" + input;
+        }else{
+            url += "&hang=" + hang + "&findphone=" + input;
         }
-        
         xhttp.open("GET", url, true);
         xhttp.send();
     });
