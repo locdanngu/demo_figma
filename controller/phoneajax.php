@@ -1,8 +1,8 @@
 <?php include('dbconnect.php'); ?>
 
 <?php
-try {
-  if(isset($_GET['value']) && isset($_GET['hang'])){//xử lí ajax khi kéo tiền mà đã chọn hàng nhưng chưa nhập
+try { 
+  if(isset($_GET['value']) && isset($_GET['hang']) && !isset($_GET['findphone'])){//xử lí ajax khi kéo tiền mà đã chọn hàng nhưng chưa nhập
     $hang = $_GET['hang'];
     $value = $_GET["value"];
     $stmt = $conn->prepare("SELECT * 
@@ -55,7 +55,7 @@ try {
     <?php
     endforeach;
   }
-  if(isset($_GET['value']) && !isset($_GET['hang']) && isset($_GET['findphone'])){ //xử lí ajax khi kéo tiền mà chưa chọn hàng hay nhập
+  if(isset($_GET['value']) && !isset($_GET['hang']) && isset($_GET['findphone'])){ //xử lí ajax khi kéo tiền mà chưa chọn hàng mà đã nhập
     // $hang = $_GET['hang'];
     $value = $_GET["value"];
     $findphone = $_GET['findphone'];

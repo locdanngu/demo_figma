@@ -154,12 +154,12 @@
         var hang = '<?php echo $hang; ?>'; // Chuyển giá trị biến PHP thành biến Javascript
         // Thêm kiểm tra để tạo URL cho yêu cầu AJAX
         var url = "controller/phoneajax.php?value=" + value;
+        var input = document.getElementById("findphone").value;     //lấy giá trị mình nhập vào ô input
         if (hang !== '') {
             url += "&hang=" + hang;
+        }else if(hang == '' && input !== ''){
+            url += "&findphone=" + input;
         }
-        // }else if(hang == '' && findphone !== ''){
-        //     url += "&findphone=" + findphone;
-        // }
         
         xhttp.open("GET", url, true);
         xhttp.send();
