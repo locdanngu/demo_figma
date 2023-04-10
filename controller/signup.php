@@ -1,6 +1,7 @@
 <?php include('dbconnect.php'); ?>
 
 <?php
+session_start();
 try {
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {                //Kiểm tra xem có phải phương thức post không
     $emaildangky = $_POST['emaildangky'];
@@ -11,6 +12,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {                //Kiểm tra xem có
     $stmt->bindParam(':emaildangky', $emaildangky);
     $stmt->bindParam(':passworddangky', $passworddangky);
     $stmt->execute();
+    $_SESSION['username'] = $_POST['emaildangnhap']; 
     $previousPage = $_SERVER['HTTP_REFERER'];               //Lưu địa chỉ trang web lúc đăng ký
     header("Location: $previousPage");                      //Trả về trang mà mình làm đăng ký
 }
