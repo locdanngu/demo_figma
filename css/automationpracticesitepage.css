@@ -540,10 +540,10 @@ input[type=checkbox]:checked:after {
     visibility: visible;
 }
 
-.phantuvector.selected img {
+/* .phantuvector.selected img {
     z-index: 0;
-    /* Thay đổi giá trị độ xoay màu theo ý muốn */
-}
+
+} */
 
 .imgvector {
     z-index: 2;

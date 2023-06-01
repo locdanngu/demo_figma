@@ -117,7 +117,7 @@ const imageContainers = document.querySelectorAll('.phantuvector'); //chọn 1 p
 
 imageContainers.forEach((container) => {
     const image = container.querySelector('.imgvector'); //khi bấm vào 1 ảnh
-    const imageText = container.querySelector('.txtvector'); //chọn txt đi cùng ảnh đó
+    // const imageText = container.querySelector('.txtvector'); //chọn txt đi cùng ảnh đó
 
     image.addEventListener('click', () => {
         // Loại bỏ lớp CSS "selected" khỏi tất cả các phần tử "image-container"
