@@ -10,7 +10,7 @@
                 <a href="#" class="text1">TestNG</a>
             </div>
         </div>
-        <div class="cot">
+        <div class="cot" id="cotmobile">
             <p class="headcot hn">TUTORIAL</p>
             <hr class="hn">
             <div class="cotnho">
@@ -21,7 +21,7 @@
                 <a href="#" class="text1">Log4j</a>
             </div>
         </div>
-        <div class="cot">
+        <div class="cot" id="cotmobile">
             <p class="headcot">DEMO SITES</p>
             <hr>
             <div class="cotnho">

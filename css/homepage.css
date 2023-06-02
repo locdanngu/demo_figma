@@ -195,7 +195,7 @@ nav {
 
 }
 
-.btnbox1:hover{
+.btnbox1:hover {
     opacity: 0.8;
 }
 
@@ -623,7 +623,7 @@ hr {
     color: #FFFFFF;
 }
 
-.cotnho{
+.cotnho {
     display: flex;
     flex-direction: column;
 }
@@ -635,12 +635,12 @@ hr {
     font-size: 14px;
     line-height: 24px;
     /* or 171% */
-margin-bottom: 1em;
+    margin-bottom: 1em;
 
     color: #FFFFFF;
 }
 
-.text1:hover{
+.text1:hover {
     color: #000;
     text-decoration: none;
 }
@@ -704,8 +704,9 @@ hr {
 
 input[type=checkbox] {
     position: relative;
-      cursor: pointer;
+    cursor: pointer;
 }
+
 input[type=checkbox]:before {
     content: "";
     display: block;
@@ -714,8 +715,9 @@ input[type=checkbox]:before {
     height: 20px;
     top: 0;
     left: 0;
-    background-color:#e9e9e9;
+    background-color: #e9e9e9;
 }
+
 input[type=checkbox]:checked:before {
     content: "";
     display: block;
@@ -724,8 +726,9 @@ input[type=checkbox]:checked:before {
     height: 20px;
     top: 0;
     left: 0;
-    background-color:#1E80EF;
+    background-color: #1E80EF;
 }
+
 input[type=checkbox]:checked:after {
     content: "";
     display: block;
@@ -1029,30 +1032,54 @@ input[type="radio"] {
     cursor: pointer;
 }
 
-.dropdown-item{
+.dropdown-item {
     text-align: center !important;
 }
 
-.fixdr{
+.fixdr {
     left: -85% !important;
 }
 
-.emailandbtn{
+.emailandbtn {
     display: flex;
     flex-direction: column;
     margin-left: 0.5em !important;
 }
 
-.avaandemail{
+.avaandemail {
     align-items: center;
     display: flex;
 }
 
-.emailuser{
+.emailuser {
     font-weight: 700;
-font-size: 14px;
-margin: 0 !important;
-color: #000000;
+    font-size: 14px;
+    margin: 0 !important;
+    color: #000000;
 
 }
 
+
+@media screen and (max-width: 767px) {
+    .tieude2box1, .bodybox1, .link,.linkbox1, .box2,.box4, #cotmobile {
+        display: none;
+    }
+
+    .tieudebox1{
+        font-size: 1.5em;
+    }
+
+    .inputbox1,.formbox1,.allbox3{
+        width: 100%;
+    }
+
+    .leftbox1{
+        width: 60%;
+    }
+
+    .box3{
+        display: flex;
+        flex-direction: column;
+    }
+    
+}
